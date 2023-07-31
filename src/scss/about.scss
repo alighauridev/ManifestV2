@@ -1,0 +1,306 @@
+@import './variable.scss';
+@import './media.scss';
+
+#about {
+    background-position: top 40px center, top;
+    background-repeat: repeat-x, repeat;
+    background: #e6e9e9;
+    z-index: 12;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        background-image: url('https://www.cyberpunk.net/build/images/razor-18e21da3.svg');
+        top: -48px;
+        // content: '';
+        height: 48px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        filter: grayscale(1) brightness(1.034);
+        z-index: 1;
+    }
+    &::after {
+        background-image: url('https://www.cyberpunk.net/build/images/razor-bottom-yellow-7dbbe9ac.svg');
+        bottom: -40px;
+        background-position: top;
+        background-repeat: repeat-x;
+        // content: '';
+        height: 40px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        filter: grayscale(1) brightness(1.034);
+    }
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+        flex-direction: column;
+        padding: 0px 20px;
+
+        @include md {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+
+        .layer {
+            background-image: linear-gradient(
+                    90deg,
+                    #000 28px,
+                    transparent 0,
+                    transparent calc(50% - 14px),
+                    #000 calc(50% - 14px),
+                    #000 calc(50% + 14px),
+                    transparent calc(50% + 14px),
+                    transparent calc(100% - 28px),
+                    #000 calc(100% - 28px),
+                    #000
+                ),
+                linear-gradient(
+                    90deg,
+                    #000 2px,
+                    transparent 0,
+                    transparent calc(50% - 1px),
+                    #000 calc(50% - 1px),
+                    #000 calc(50% + 1px),
+                    transparent calc(50% + 1px),
+                    transparent calc(100% - 2px),
+                    #000 calc(100% - 2px),
+                    #000
+                );
+            background-repeat: no-repeat;
+            background-size: 100% 2px, 100% 28px;
+            height: 28px;
+            width: 100%;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            padding: 30px 0px 50px;
+
+            h1 {
+                color: #000;
+                font-family: 'refinery';
+
+                font-size: clamp(4rem, 5vw, 7rem);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: #000;
+                font-family: 'blender';
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                max-width: 800px;
+                margin: auto;
+                text-align: center;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            row-gap: 30px;
+
+            .heading {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .para {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                gap: 40px;
+                padding-left: 30px;
+
+                p {
+                    text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+                    color: #000;
+                    font-size: 36px;
+                    font-family: 'font-1';
+                    font-weight: 700;
+                    letter-spacing: 4.2px;
+                    line-height: 42.4px;
+
+                    @include md {
+                        letter-spacing: 1.2px;
+                    }
+                }
+            }
+
+            .imges {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 20px 0px;
+                border-right: 4px solid #000;
+                border-left: 4px solid #000;
+
+                @include md {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                img {
+                    max-width: 300px;
+                    object-fit: cover;
+                    width: 300px;
+                    height: 300px;
+                    filter: grayscale(1);
+                    transition: all 0.6s ease-in-out;
+                    transform: scale(1);
+
+                    @include sm {
+                        width: 100%;
+                    }
+                }
+
+                .box {
+                    position: relative;
+                    display: flex;
+                    overflow: hidden;
+                    transition: all 0.6s ease-out;
+                    cursor: pointer;
+                    border-right: 4px solid #000;
+                    border-left: 4px solid #000;
+                    border-top: 8px solid #000;
+                    border-bottom: 8px solid #000;
+                    align-items: center;
+                    justify-content: center;
+
+                    .upper {
+                        position: absolute;
+                        top: 0px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: end;
+                        justify-content: center;
+                        transition: all 0.8s ease-in-out;
+
+                        .btn {
+                            color: black;
+                            border-radius: 4px;
+                            display: flex;
+                            padding: 16px 32px;
+                            position: relative;
+                            width: 20%;
+                            background-repeat: no-repeat;
+                            align-items: center;
+                            justify-content: center;
+
+                            position: relative;
+                            color: white;
+
+                            user-select: none;
+
+                            img {
+                                width: auto !important;
+                                height: 100%;
+                                filter: inherit !important;
+                                max-width: 220px;
+                                transform: none !important;
+                            }
+
+                            span {
+                                text-transform: uppercase;
+                                font-family: 'blender';
+                                letter-spacing: 2px;
+                                font-size: 18px;
+                                line-height: 16px;
+                                position: absolute;
+                                width: 200px;
+                                text-align: center;
+                                color: #28e9e0;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .model {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        background: #00000063;
+        transition: all 0.8s ease-out;
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+
+        .center {
+            padding: 20px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: black;
+            width: 90%;
+            gap: 1.34rem;
+            position: relative;
+            .cross {
+                filter: invert(1);
+                width: 35px;
+                position: absolute;
+                right: 10px;
+                cursor: pointer;
+                top: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+            > img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+            .upper {
+                h2 {
+                    color: #e6e9e9;
+                    font-family: 'refinery';
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: #e6e9e9;
+                    font-family: 'blender';
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

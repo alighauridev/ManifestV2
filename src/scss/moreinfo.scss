@@ -1,0 +1,124 @@
+@import './variable.scss';
+@import './media.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#section-2 {
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important;
+    padding: 80px 0px 140px 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-position: 20px calc(100% - 20px);
+    background-repeat: repeat-x;
+
+    background-position: bottom center;
+    background-image: url('../assests/bac-main.png');
+    position: relative;
+
+    background-position: top 40px center, top;
+    background-repeat: repeat-x, repeat;
+    background-image: url('https://www.cyberpunk.net/build/images/noise-gradient-af9cb7ed.png');
+    background-position: top, top 440px center;
+    background-repeat: repeat-x, repeat-x;
+
+    height: 640px;
+    // margin-top: -119px;
+    justify-content: end;
+    .wrapper {
+        border-bottom: 1px solid #28e9e021;
+        border-top: 1px solid #28e9e01f;
+        width: 100%;
+    }
+    &:before {
+        background-image: url('../assests/bac-main.png');
+
+        background-position: bottom;
+        top: 50px;
+        background-repeat: repeat-x;
+        content: '';
+        display: block;
+        height: calc(60% + 2px);
+        opacity: 1;
+        pointer-events: none;
+        position: absolute;
+        transition: opacity 3s;
+        width: 100%;
+        z-index: 1;
+        background-size: 70px;
+        left: 0px;
+    }
+    &::after {
+        background-image: url('../assests/noise-pattern-90c709f6.png');
+        // content: '';
+        background-position: bottom center;
+        background-repeat: repeat;
+        background-size: 70px;
+        left: 0px;
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        z-index: -1;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 4;
+        display: grid;
+        padding: 0px 0px;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        width: 100%;
+        padding: 50px 20px;
+        row-gap: 20px;
+        align-items: center;
+        background: linear-gradient(90deg, #28e9e0 2px, transparent 0) 0 0,
+            linear-gradient(90deg, #28e9e0 2px, transparent 0) 0 100%,
+            linear-gradient(270deg, #28e9e0 2px, transparent 0) 100% 0,
+            linear-gradient(270deg, #28e9e0 2px, transparent 0) 100% 100%,
+            linear-gradient(180deg, #28e9e0 2px, transparent 0) 0 0,
+            linear-gradient(180deg, #28e9e0 2px, transparent 0) 100% 0,
+            linear-gradient(0deg, #28e9e0 2px, transparent 0) 0 100%,
+            linear-gradient(0deg, #28e9e0 2px, transparent 0) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+
+        .heading {
+            h1 {
+                color: #28e9e0;
+                font-family: 'refinery';
+                font-size: clamp(4rem, 5vw, 7rem);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+
+        .para {
+            max-width: 700px;
+
+            p {
+                font-family: 'blender';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                color: #e6e9e9;
+                text-align: center;
+            }
+        }
+    }
+}

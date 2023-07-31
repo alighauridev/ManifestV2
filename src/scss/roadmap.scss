@@ -1,0 +1,301 @@
+@import "./variable.scss";
+@import "./media.scss";
+
+.roadmap {
+  position: relative;
+  padding: 90px 10px;
+  overflow: hidden;
+  background-size: cover;
+  z-index: 1;
+  background: #f2f2f2;
+
+  @include md {
+    padding: 50px 0px;
+  }
+
+  @include md {
+    overflow: hidden;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assests/road-bac.jpg");
+
+    background-size: cover;
+    background-position: 5%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+
+    h1 {
+      font-family: "raboto";
+      font-size: 4rem;
+      font-weight: 500;
+      text-transform: none;
+      color: #000000;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include md {
+      }
+    }
+
+    p {
+      font-family: "open";
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+      text-transform: none;
+      color: #999;
+      text-align: center;
+      max-width: 600px;
+
+      @include md {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 10px;
+    position: relative;
+    z-index: 3;
+
+    @include mobile {
+      padding-left: 30px !important;
+    }
+
+    .roadmap__grid {
+      padding: 0px 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 3rem;
+      grid-column-gap: 5rem;
+      margin-top: 50px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 3px;
+        transform: translateX(-50%);
+        z-index: 0;
+        background: #fdd600;
+        border-radius: 8px;
+
+        @include md {
+          left: 0px;
+        }
+      }
+
+      @include lg {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include md {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      .item-wrapper {
+        @include md {
+          margin-left: 30px !important;
+
+          @include mobile {
+            margin-left: 30px !important;
+          }
+        }
+
+        .item {
+          box-sizing: border-box;
+          padding-bottom: 4vw;
+          padding: 30px 40px;
+          height: -moz-fit-content;
+          height: fit-content;
+          position: relative;
+          position: relative;
+          background: #fff;
+          border-radius: 0.25em;
+          width: 100%;
+          box-shadow: 0 3px 0 #fdd600;
+
+          &.right {
+            // margin-top: 240px;
+
+            @include md {
+              margin-top: 0;
+            }
+          }
+
+          h2 {
+            line-height: 1;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: #252525;
+            font-style: normal;
+            position: relative;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 7px;
+            text-align: start;
+            font-family: "raboto";
+
+            &:before {
+              content: "";
+              position: absolute;
+              background: transparent;
+              width: 15px;
+              height: 15px;
+              transform: rotate(360deg) translateX(-52%);
+              top: -181%;
+              left: -64px;
+              border-radius: 2px;
+            }
+          }
+
+          .icon {
+            background: #252525;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 111;
+            box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+              0 3px 0 4px rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+
+            @include md {
+              width: 50px;
+              height: 50px;
+            }
+
+            img {
+              width: 100%;
+              object-fit: scale-down;
+              max-width: 100%;
+            }
+          }
+
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            gap: 4px;
+            position: relative;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin-left: -2px;
+            list-style: none;
+
+            li {
+              line-height: 1.2;
+              letter-spacing: 0px;
+              word-spacing: 0px;
+              font-weight: 400;
+              list-style: circle;
+              margin-left: 4px;
+              color: #666666;
+              font-size: 16px;
+              font-family: "open";
+            }
+          }
+
+          .detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: center;
+
+            > h2 {
+              font-weight: 500;
+              margin-bottom: 5px;
+
+              color: #f364f0;
+              font-size: 2rem;
+              font-weight: 800;
+              filter: drop-shadow(2px 6px 4px #00000087);
+            }
+
+            > h4 {
+              color: #ccc;
+              font-weight: 400;
+              margin-bottom: 15px;
+            }
+          }
+        }
+
+        .left {
+          margin-right: 20px;
+
+          @include md {
+            margin-right: 0px;
+          }
+
+          .icon {
+            position: absolute;
+            right: -70px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include md {
+              right: 286px;
+            }
+          }
+        }
+
+        .right {
+          margin-left: 20px;
+
+          @include md {
+            margin-left: 0px;
+          }
+
+          .icon {
+            position: absolute;
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include md {
+              left: -56px;
+            }
+          }
+        }
+      }
+
+      .item-right {
+        height: 555px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+
+        @include md {
+          height: auto;
+        }
+      }
+    }
+  }
+}
