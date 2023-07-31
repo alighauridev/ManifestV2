@@ -65,16 +65,23 @@
                     width: 100%;
                     padding: 0;
                     // border: 3px solid #fff;
-
+@include md{
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 265px;
+}
                     div.Ja {
                         margin-top: 15px;
                     }
                     .img {
-                        width: 100%;
-                        text-align: center;
-                        position: relative;
-                        border: 3px solid #fff;
-                        height: 200px;
+                 width: 100%;
+    text-align: center;
+    position: relative;
+    border: 3px solid #e6e6e6;
+    height: 200px;
+    @include md{
+        height: 265px;
+    }
                         > a {
                             position: absolute;
                             background: #fff48e;

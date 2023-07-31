@@ -32,6 +32,9 @@
     height: 640px;
     // margin-top: -119px;
     justify-content: end;
+    @include md{
+        height: unset;
+    }
     .wrapper {
         border-bottom: 1px solid #28e9e021;
         border-top: 1px solid #28e9e01f;

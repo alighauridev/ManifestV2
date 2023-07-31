@@ -79,11 +79,43 @@ const InquiryForm = ({ setInquiryFormShow }) => {
                     <form onSubmit={sendEmail}>
                         <div className="first">
                             <div className="item">
-                                <inputx
+                                <input
                                     id="name"
                                     required={true}
                                     type="text"
-                                    placeholder="Enter Your Name"
+                                    placeholder="Your Name"
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+                        <div className="first">
+                            <div className="item">
+                                <input
+                                    id="company"
+                                    required={true}
+                                    type="text"
+                                    placeholder="Company Name"
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="first grid__two">
+                            <div className="item">
+                                <input
+                                    id="twitter-personal"
+                                    required={true}
+                                    type="text"
+                                    placeholder="Twitter Personal"
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div className="item">
+                                <input
+                                    id="twitter-business"
+                                    required={true}
+                                    type="text"
+                                    placeholder="Twitter Business"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -99,20 +131,39 @@ const InquiryForm = ({ setInquiryFormShow }) => {
                             />
                         </div>
                         <div className="third">
+
                             <input
-                                id="company"
+                                id="website"
                                 required={true}
                                 type="text"
-                                placeholder="Company"
+                                placeholder="Website Link"
                                 onChange={handleChange}
                             />
-                            <input
-                                id="twitter"
-                                required={true}
-                                type="text"
-                                placeholder="Twitter Link"
-                                onChange={handleChange}
-                            />
+                        </div>
+                        <div className="first grid__two">
+                            <div className="item">
+                                <input
+                                    id="stage"
+                                    required={true}
+                                    type="text"
+                                    placeholder="Which stage is your business "
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div className="item">
+                                <input
+                                    id="help"
+                                    required={true}
+                                    type="text"
+                                    placeholder="What do you need help with"
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+                        <div className="first ">
+                            <div className='item'>
+                                <textarea name="" id="aboutProject" cols="15" placeholder='Tell us about your project' rows="10" onChange={handleChange} ></textarea>
+                            </div>
                         </div>
                         <div className="first">
 

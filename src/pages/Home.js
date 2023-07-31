@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import createScrollSnap from 'scroll-snap';
-import './styles.css';
+import './styles.scss';
 import Banner from '../components/Banner';
 import MoreInfo from '../components/MoreInfo';
 import About from '../components/About';

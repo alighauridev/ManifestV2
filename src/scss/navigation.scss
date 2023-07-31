@@ -74,6 +74,9 @@ header {
 
                         max-width: 200px;
                         width: 100%;
+                        @include md{
+                            max-width: 140px;
+                        }
                     }
                 }
 

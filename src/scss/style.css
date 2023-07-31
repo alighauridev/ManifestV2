@@ -45,7 +45,6 @@
 body {
     overflow-x: hidden;
     height: 100%;
-    /* position: relative; */
     background-image: url('../assests/noise-pattern-90c709f6.png');
 }
 

@@ -27,7 +27,7 @@
             #28e9e0a6 -128.23%,
             #07413e59 119.88%
         );
-        padding: 40px 40px;
+        padding: 40px 40px 20px;
         position: relative;
         border: 1px solid #18d1c8;
         .content {
@@ -102,7 +102,7 @@
             }
         }
         .heading {
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
 
             h1 {
                 font-size: 3rem;
@@ -213,7 +213,9 @@
                     }
                 }
             }
-
+            .grid__two {
+                grid-template-columns: 1fr 1fr;
+            }
             .second {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -280,7 +282,7 @@
                 background: rgba(255, 255, 255, 0.15) no-repeat !important;
                 outline: 0;
                 color: #fff;
-                padding: 15px 14px;
+                padding: 12px 14px;
                 border-radius: 0px;
                 /* backdrop-filter: blur(1px); */
                 border-radius: 0;
@@ -305,7 +307,7 @@
                 background: rgba(255, 255, 255, 0.15) no-repeat !important;
                 outline: 0;
                 color: #fff;
-                padding: 15px 14px;
+                padding: 12px 14px;
                 border-radius: 0px;
                 /* backdrop-filter: blur(1px); */
                 border-radius: 0;

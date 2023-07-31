@@ -1,3 +1,7 @@
+@import '../scss/variable.scss';
+@import '../scss/media.scss';
+
+
 html,
 body {
     margin: 0;
@@ -21,21 +25,33 @@ body {
     color: #000;
 }
 .first-page {
-    height: 100%;
+    
+    @include -lg{
+        height: 100%;
     min-height: 100%;
+    }
 }
 .second-page {
-    height: 100%;
+    
+    @include -lg{
+        height: 100%;
     min-height: 100%;
+    }
 }
 .third-page {
-    height: 100%;
+    
+    @include -lg{
+        height: 100%;
     min-height: 100%;
+    }
     background: #e6e9e9;
 }
 .fourth-page {
-    height: 100%;
+    
+    @include -lg{
+        height: 100%;
     min-height: 100%;
+    }
 }
 .hint {
     position: absolute;
