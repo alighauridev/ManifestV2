@@ -7,12 +7,11 @@
     background: #e6e9e9;
     z-index: 12;
     // height: 100%;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 0 90px;
-    @include -lg{
+    @include -lg {
         height: 100%;
         padding: 0;
     }
@@ -104,6 +103,9 @@
                 line-height: 100%;
                 text-align: center;
                 text-transform: uppercase;
+                @include md {
+                    font-family: 'refinery medium';
+                }
             }
 
             p {
@@ -166,7 +168,7 @@
 
                 @include md {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr;
                 }
 
                 @include mobile {
@@ -275,28 +277,28 @@
             width: 90%;
             gap: 1.34rem;
             position: relative;
-            @include md{
-                    overflow: auto;
-    height: 90vh;
-    grid-template-columns: 1fr;
-    /* Webkit-based browsers */
-&::-webkit-scrollbar {
-  width: 12px; /* Set the width of the scrollbar */
-}
+            max-width: 1000px;
+            @include md {
+                overflow: auto;
+                height: 90vh;
+                grid-template-columns: 1fr;
+                /* Webkit-based browsers */
+                &::-webkit-scrollbar {
+                    width: 6px; /* Set the width of the scrollbar */
+                }
 
-&::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Set the background color of the scrollbar track */
-}
+                &::-webkit-scrollbar-track {
+                    background-color: #e6e9e9; /* Set the background color of the scrollbar track */
+                }
 
-&::-webkit-scrollbar-thumb {
-  background-color: #888; /* Set the color of the scrollbar thumb (handle) */
-  border-radius: 6px; /* Set the border radius of the scrollbar thumb */
-}
+                &::-webkit-scrollbar-thumb {
+                    background-color: rgba(0, 0, 0, 0.85);
+                    border-radius: 0;
+                }
 
-&::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Set the color of the scrollbar thumb on hover */
-}
-
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: #555; /* Set the color of the scrollbar thumb on hover */
+                }
             }
             .cross {
                 filter: invert(1);
@@ -322,11 +324,18 @@
                     text-transform: uppercase;
                     font-size: 2.5rem;
                     margin-bottom: 10px;
+                    @include md {
+                        font-family: 'refinery medium';
+                        line-height: 1;
+                    }
                 }
                 p {
-                    color: #e6e9e9;
-                    font-family: 'blender';
+                    text-transform: capitalize;
                     font-size: 18px;
+                    font-weight: 400;
+                    font-family: 'blender';
+                    color: #e2e2e2;
+                    transition: all 0.6s ease-out;
                 }
             }
         }

@@ -20,6 +20,12 @@
     font-weight: normal;
 }
 @font-face {
+    font-family: 'refinery medium';
+    src: url('./font/Refinery/Refinery\ 15\ Medium.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
     font-family: 'blender';
     src: url('./font/Blender-Pro-Book/Blender-Pro-Book.otf');
     font-style: normal;

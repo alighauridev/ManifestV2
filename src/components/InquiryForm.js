@@ -122,23 +122,27 @@ const InquiryForm = ({ setInquiryFormShow }) => {
                         </div>
 
                         <div className="second">
-                            <input
-                                id="email"
-                                required={true}
-                                type="email"
-                                placeholder="Enter Email"
-                                onChange={handleChange}
-                            />
+                            <div className="item">
+                                <input
+                                    id="email"
+                                    required={true}
+                                    type="email"
+                                    placeholder="Enter Email"
+                                    onChange={handleChange}
+                                />
+                            </div>
                         </div>
                         <div className="third">
 
-                            <input
-                                id="website"
-                                required={true}
-                                type="text"
-                                placeholder="Website Link"
-                                onChange={handleChange}
-                            />
+                            <div className="item">
+                                <input
+                                    id="website"
+                                    required={true}
+                                    type="text"
+                                    placeholder="Website Link"
+                                    onChange={handleChange}
+                                />
+                            </div>
                         </div>
                         <div className="first grid__two">
                             <div className="item">

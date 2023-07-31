@@ -32,7 +32,7 @@
     height: 640px;
     // margin-top: -119px;
     justify-content: end;
-    @include md{
+    @include md {
         height: unset;
     }
     .wrapper {
@@ -103,10 +103,13 @@
                 font-family: 'refinery';
                 font-size: clamp(4rem, 5vw, 7rem);
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 100;
                 line-height: 100%;
                 text-align: center;
                 text-transform: uppercase;
+                @include md {
+                    font-family: 'refinery medium';
+                }
             }
         }
 

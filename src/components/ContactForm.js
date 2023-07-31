@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import cross from "../assests/bb (2).png"
 import "../scss/contactForm.scss"
+import Select from 'react-select';
 const ContactForm = ({ setCreatorsForm }) => {
     const [form, setForm] = useState({
         name: '',
@@ -32,22 +33,36 @@ const ContactForm = ({ setCreatorsForm }) => {
             });
     }
 
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.id]: e.target.value });
-    }
+    const handleChange = (field, selectedOption) => {
+        setForm({ ...form, [field]: selectedOption });
+    };
 
-    const investmentBudgetOptions = [
-        { value: '$0 - $5k', label: ' $0 - $5k' },
-        { value: '$5k - $10k', label: '$5k - $10k' },
-        { value: '$10k - $25k', label: '$10k - $25k' },
-        { value: '$25k - $50k', label: '$25k - $50k' },
-        { value: '$50k +', label: '  $50k +' },
+
+    const socialMediaOptions = [
+        { value: 'Twitter', label: 'Twitter' },
+        { value: 'TikTok', label: 'TikTok' },
+        { value: 'Instagram', label: 'Instagram' },
+        { value: 'YouTube', label: 'YouTube' },
     ];
 
-    const bestTimeToContactOptions = [
-        { value: 'Morning', label: 'Morning' },
-        { value: 'Afternoon', label: 'Afternoon' },
-        { value: 'Evening', label: 'Evening' },
+    const blockchainOptions = [
+        { value: 'Ethereum', label: 'Ethereum' },
+        { value: 'Binance Smart Chain', label: 'Binance Smart Chain' },
+        { value: 'Polygon (Matic)', label: 'Polygon (Matic)' },
+        // Add more options as needed
+    ];
+    const playVideoGamesOptions = [
+        { value: 'yes', label: 'Yes' },
+        { value: 'no', label: 'No' },
+    ];
+
+    const videoGameTypeOptions = [
+        { value: 'action', label: 'Action' },
+        { value: 'adventure', label: 'Adventure' },
+        { value: 'sports', label: 'Sports' },
+        { value: 'rpg', label: 'RPG' },
+        { value: 'strategy', label: 'Strategy' },
+        // Add more options as needed
     ];
 
     return (
@@ -70,33 +85,93 @@ const ContactForm = ({ setCreatorsForm }) => {
                     <form onSubmit={sendEmail}>
                         <div className='first'>
                             <div className='item'>
-                                <input id='name' required={true} type='text' placeholder='Enter Your Name' onChange={handleChange} />
+                                <input id='name' required={true} type='text' placeholder='Enter Your Name' onChange={(e) => handleChange('name', e.target.value)} />
                             </div>
-
-                        </div>
-
-                        <div className='second'>
-
-                            <input id='email' required={true} type='email' placeholder='Enter Email' onChange={handleChange} />
-                        </div>
-                        <div className='third'>
-                            <input id='website' required={true} type='text' placeholder='Website Link' onChange={handleChange} />
-                            <input id='twitter' required={true} type='text' placeholder='Twitter Link' onChange={handleChange} />
-
-                        </div>
-                        <div className='first'>
                             <div className='item'>
-                                <textarea name="" id="objective" cols="20" placeholder='Primary Objective' rows="10" onChange={handleChange} ></textarea>
+                                <input id='twitter' required={true} type='text' placeholder='Twitter Handle' onChange={(e) => handleChange('twitter', e.target.value)} />
                             </div>
-                            <button>{loading ? "Submitting..." : "Submit"}</button>
+                            <div className="first grid__two">
+                                <div className='item'>
+                                    <Select
+                                        id='socialMedia'
+                                        placeholder='Preferred Social Media Platform'
+                                        options={socialMediaOptions}
+                                        value={form.socialMedia}
+                                        onChange={(selectedOption) => handleChange('socialMedia', selectedOption)}
+                                    />
+                                </div>
+                                <div className='item'>
+                                    <input id='tiktokIgYoutubeLinks' required={true} type='text' placeholder='TikTok/IG/YouTube Links' onChange={(e) => handleChange('tiktokIgYoutubeLinks', e.target.value)} />
+                                </div>
+                            </div>
+                            <div className='item'>
+                                <input id='contentCreated' required={true} type='text' placeholder='Type of Content Created' onChange={(e) => handleChange('contentCreated', e.target.value)} />
+                            </div>
+                            <div className='item'>
+                                <Select
+                                    id='preferredBlockchain'
+                                    placeholder='Your Preferred Blockchain'
+                                    options={blockchainOptions}
+                                    value={form.preferredBlockchain}
+                                    onChange={(selectedOption) => handleChange('preferredBlockchain', selectedOption)}
+                                />
+                            </div>
+                            <div className="first grid__two">
+                                <div className='item'>
+                                    <Select id='playVideoGames'
+                                        options={playVideoGamesOptions}
+                                        value={form.playVideoGames}
+                                        onChange={(e) => handleChange('playVideoGames', e.target.value)}
+                                        placeholder='Do you play video games?
+'
+                                    >
 
+                                    </Select>
+                                </div>
+                                {/* ... */}
+                                <div className='item'>
+                                    <Select
+                                        id='videoGameType'
+                                        options={videoGameTypeOptions}
+                                        value={form.videoGameType}
+                                        onChange={(e) => handleChange('videoGameType', e.target.value)}
+                                        placeholder={"What type of video games?"}
+                                    >
+
+                                    </Select>
+                                </div>
+                            </div>
+
+                            <div className='item'>
+                                <input id='contentCreationExperience' required={true} type='text' placeholder='Content Creation Experience' onChange={(e) => handleChange('contentCreationExperience', e.target.value)} />
+                            </div>
+                            <div className='item'>
+                                <textarea
+                                    id='briefDescription'
+                                    required={true}
+                                    cols='20'
+                                    placeholder='Brief Description of Yourself'
+                                    rows='5'
+                                    onChange={(e) => handleChange('briefDescription', e.target.value)}
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div className="first">
+                            <button>{loading ? "Submitting..." : "Submit"}</button>
                         </div>
                     </form>
                 </div>
                 <div className="content">
                     <h2>Content Creators Form</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat deserunt debitis culpa laborum vel distinctio? Sapiente qui adipisci dicta repudiandae sint id aperiam iusto ratione neque asperiores hic, ex nisi, error voluptates alias placeat voluptatibus, et itaque ducimus ea culpa laborum reiciendis. Error aliquam, explicabo eligendi corrupti a tempora!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio dignissimos quibusdam provident repellat, nisi reprehenderit praesentium ipsum! Minus doloremque obcaecati explicabo deleniti nisi adipisci impedit vero, illo vel modi nam reiciendis dolorem earum animi cupiditate. Voluptatum iure quas impedit quo.</p>
+                    <p>The CONTENT CREATORS FORM is a comprehensive platform designed to empower and engage content creators across various digital mediums. It serves as a bridge between aspiring creators and their audience, providing an intuitive interface to share their unique creations with the world. Whether it's creating captivating videos, crafting compelling blog posts, or curating visually stunning images, this form caters to a diverse range of creative talents.</p>
+
+                    <p>With a user-friendly layout and a wealth of features, the CONTENT CREATORS FORM allows creators to showcase their work, connect with their target audience, and receive valuable feedback. It also facilitates collaborations and networking opportunities, enabling creators to grow their influence and reach new heights in their creative endeavors. From seasoned professionals to budding enthusiasts, the platform welcomes all content creators, fostering a vibrant community of individuals passionate about making an impact through their artistry.
+
+
+
+
+                    </p>
                 </div>
             </div>
 

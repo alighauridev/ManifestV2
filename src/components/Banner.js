@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import btn1 from '../assests/btn-bac.svg'
-import video from '../assests/Video/InShot_20230722_184634689.mp4'
+import video from '../assests/Video/two.mp4'
 import { AppContext } from '../context/AppContext'
 import '../scss/banner.scss'
 import ContactForm from './ContactForm'
