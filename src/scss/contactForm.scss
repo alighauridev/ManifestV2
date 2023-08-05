@@ -17,6 +17,7 @@
     justify-content: center;
     @include md {
         overflow: auto;
+        padding: 20px 10px;
     }
     .grid__ {
         display: grid;
@@ -26,9 +27,9 @@
         grid-column-gap: 2rem;
         background: linear-gradient(
             262.62deg,
-            #28e9e0 -146.25%,
-            #28e9e0a6 -128.23%,
-            #07413e59 119.88%
+            rgba(0, 0, 0, 0.85) -146.25%,
+            #000 -128.23%,
+            #12141459 119.88%
         );
         padding: 40px 40px 20px;
         position: relative;
@@ -37,7 +38,6 @@
             grid-template-columns: 1fr;
             grid-gap: 1.5rem;
             padding: 20px 15px 20px;
-            margin: 20px 0;
         }
         .content {
             order: 1;
@@ -104,10 +104,13 @@
             filter: invert(1);
             width: 35px;
             position: absolute;
-            right: 15px;
+            right: 10px;
             cursor: pointer;
-            top: 15px;
-
+            top: 10px;
+            @include md {
+                top: 8px;
+                right: 8px;
+            }
             img {
                 width: 100%;
             }
@@ -294,7 +297,7 @@
                     min-width: 100%;
                     border: 0;
                     border-radius: 0px;
-                    background: rgba(255, 255, 255, 0.15) no-repeat !important;
+                    background: #ffffff03 no-repeat !important;
                     outline: 0;
                     color: #fff;
                     padding: 12px 14px;
@@ -319,7 +322,7 @@
                     min-width: 100%;
                     border: 0;
                     border-radius: 0px;
-                    background: rgba(255, 255, 255, 0.15) no-repeat !important;
+                    background: #ffffff03 no-repeat !important;
                     outline: 0;
                     color: #fff;
                     padding: 12px 14px;
@@ -497,7 +500,7 @@
     border-style: solid;
     border-width: 1px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.15) no-repeat !important;
+    background: #ffffff03 no-repeat !important;
     backdrop-filter: blur(1px) !important;
 }
 .css-1jqq78o-placeholder {
@@ -521,4 +524,27 @@
     margin-top: 8px;
     box-sizing: border-box;
     display: none !important;
+}
+.css-qbdosj-Input {
+    grid-area: 1/1/2/3;
+    color: #bdc2c2 !important;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-sizing: border-box;
+    /* font-family: auto; */
+    font-size: 14px !important;
+    font-weight: 200;
+}
+.css-1dimb5e-singleValue {
+    grid-area: 1/1/2/3;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #bdc2c2;
+    margin-left: 6px !important;
+    margin-right: 2px;
+    box-sizing: border-box;
+    font-weight: 100 !important;
+    font-size: 14px !important;
 }

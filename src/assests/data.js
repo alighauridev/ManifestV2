@@ -1,6 +1,8 @@
-import img1 from "../assests/p1.jpg";
-import img2 from "../assests/p  (2).jpg";
-import img3 from "../assests/p  (3).jpg";
+import img1 from "../assests/MNFST TEAM SECTION/MRMINT.png";
+import img2 from "../assests/MNFST TEAM SECTION/PIXXELZ.png";
+import img3 from "../assests/MNFST TEAM SECTION/DAVID10x.png";
+import img4 from "../assests/MNFST TEAM SECTION/DEGEN.png";
+import img5 from "../assests/MNFST TEAM SECTION/MHK.png";
 
 export const nav = [
   {
@@ -27,35 +29,40 @@ export const nav = [
 ];
 export const team = [
   {
-    name: "Lucian Potlog",
-    position: "Founder",
-    desc: "A visually talented MF. The man who first drew the concept of these exceptional Shutter Bots along with Artmarketeer. He is an amazing artist who adapted his talents to the digital age by being a professional graphic designer for over 10 years. Even as a young child he would draw on walls, but now he draws inspiration from the walls as he changed profession pursuing photography full time. He is one of Ireland’s best known street photographers with a following of 20k across his channels.",
-    path: "https://www.nftshoweurope.com/wp-content/uploads/2023/01/rafa-garcia.webp",
+    name: "MRMINT ",
+    position: "FOUNDER ",
+    twitter: "https://twitter.com/MrMintETH",
+    image: img1,
+
   },
 
   {
-    name: "Claudiu Potlog",
-    position: "Artist",
-    desc: "As a child he must have looked up to his older brother as he followed his footsteps into the life of an artist. Educated in the traditional sense he has a master’s in graphic design. Him and his brother created the art of the NFT collection together probably arguing like brothers do (only because they want the best possible art work) Although he is a master at digital art he still has a huge passion for traditional art with huge canvases across his house that he painted. Most kids played with Lego these two played with pencils.",
-    path: "https://www.nftshoweurope.com/wp-content/uploads/2023/01/seung-yoo.webp",
+    name: "PIXXELZ ",
+    position: "CO-FOUNDER",
+    twitter: "https://twitter.com/pixxelznft",
+    image: img2,
+
   },
   {
-    name: "Conor D’Arcy",
-    position: "Artist",
-    desc: "Visually unstable but visually passionate. A self-taught filmmaker who loves creating stories. Working freelance for over 3 years making the types of adverts that not all brands can use because they are a little unhinged. He has worked with many start- ups always making sure to be as fun as he is professional. A little bit weird but aren’t we all.",
-    path: "https://www.nftshoweurope.com/wp-content/uploads/2022/10/sam-hamilton-1.webp",
+    name: "DAVID10X ",
+    position: "GROWTH & BD",
+    twitter: "https://twitter.com/David10x3",
+    image: img3,
+
   },
   {
-    name: "Karlo Turić",
-    position: "Social Media Manager",
-    desc: "This man makes Joe exotic look like an accountant. A lover of all exotic creatures and an expert in the NFT space. Karlo is an expert in the NFT space and with social media marketing, amassing over 150k across his channels. He is experienced in design, social media and discord management. Running a successful print on demand business for 3 years now. Actively trading and working in the NFT space. Experienced in design, social media and discord management.",
-    path: "https://www.nftshoweurope.com/wp-content/uploads/2022/10/pablo-alpe.webp",
+    name: "DEGEN ",
+    position: "PROJECT MANAGER",
+    twitter: "https://twitter.com/DegenMNFST",
+    image: img4,
+
   },
   {
-    name: "Karlo Turić",
-    position: "Social Media Manager",
-    desc: "This man makes Joe exotic look like an accountant. A lover of all exotic creatures and an expert in the NFT space. Karlo is an expert in the NFT space and with social media marketing, amassing over 150k across his channels. He is experienced in design, social media and discord management. Running a successful print on demand business for 3 years now. Actively trading and working in the NFT space. Experienced in design, social media and discord management.",
-    path: "https://www.nftshoweurope.com/wp-content/uploads/2023/07/al-crego.png",
+    name: "MHK ",
+    position: "COLLAB MANAGER",
+    twitter: "https://twitter.com/0xmhk_",
+    image: img5,
+
   },
 ];
 

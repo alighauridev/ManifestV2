@@ -28,7 +28,7 @@ const Teams = () => {
                                         data-aos-easing="ease-out">
                                         <div className="inner">
                                             <div className={`img ${ite.name.substring(0, 3)}`}>
-                                                <img src={ite.path} alt="" />
+                                                <img src={ite.image} alt="" />
                                             </div>
                                             <div className="detail">
                                                 <h2 className="name">

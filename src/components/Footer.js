@@ -15,7 +15,7 @@ import icon3 from "../assests/footer icons/twitter.svg";
 import icon4 from "../assests/footer icons/squre3.svg";
 import icon5 from "../assests/footer icons/discord.svg";
 import { FaTelegramPlane } from "react-icons/fa";
-import logo from "../assests/logobig.png"
+import logo from "../assests/TEXT.png"
 import { AiOutlineTwitter, AiOutlineTelegram } from "react-icons/ai";
 import "../scss/footer.scss";
 import { LinkRounded } from "@material-ui/icons";

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { LinearProgress } from '@mui/material'
 import '../scss/loader.scss'
-import logo from "../assests/logo.png"
+import logo from "../assests/TEXT.png"
 const Loader = ({ setLoading }) => {
     const [progress, setProgress] = useState(0)
 

@@ -3,14 +3,14 @@
 
 #mission {
     position: relative;
-    background-image: url('../assests/bac-main.png'),
-        url('../assests/noise-pattern-90c709f6.png');
+    // background-image: url('../assests/bac-main.png'),
+    //     url('../assests/noise-pattern-90c709f6.png');
     background-position: top -318px center, top;
     background-repeat: repeat-x, repeat;
     background-size: 70px;
 
     .container {
-        max-width: 1200px;
+        max-width: 1300px;
         margin: auto;
         padding: 150px 20px;
         display: grid;

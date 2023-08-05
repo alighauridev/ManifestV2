@@ -8,6 +8,7 @@ import Mission from '../components/Mission';
 import Team from "../components/Team";
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import Collection from '../components/Collection';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -19,7 +20,7 @@ const Home = () => {
     const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
     // Apply scroll snap behavior only in desktop mode
-    if (isDesktop) {
+    if (false) {
       createScrollSnap(element, {
         snapDestinationY: '100%',
       }, () => console.log('snapped'));
@@ -38,6 +39,7 @@ const Home = () => {
       <div className="page third-page">
         <About />
       </div>
+
       <div className="page fourth-page">
         <Mission />
       </div>

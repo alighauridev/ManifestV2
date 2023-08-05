@@ -26,7 +26,7 @@
         height: 140vh;
     }
     .container {
-        max-width: 1200px;
+        max-width: 1300px;
         margin: 0 auto;
         height: 100%;
 
@@ -177,4 +177,20 @@
     z-index: 100;
     background-position: 0 bottom;
     // transform: translateX(-50%);
+}
+.banner__wrapper::before {
+    content: '';
+    background: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0),
+        rgba(13, 13, 13, 0.35) 45.83%,
+        #000000
+    );
+    height: 240px;
+    bottom: 0;
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }

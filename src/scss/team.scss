@@ -11,9 +11,9 @@
     background-size: 70px;
     background-repeat: repeat-x, repeat;
     overflow: hidden;
-    height: 100vh;
     display: flex;
     align-items: center;
+    padding: 100px 0;
     @include md {
         padding: 60px 0;
         height: unset;
@@ -30,7 +30,7 @@
                 display: block;
                 text-shadow: 1px 2px 11px #00000026;
                 text-align: center;
-                color: #fff;
+                color: #e6e6e6;
                 text-transform: uppercase;
                 margin-bottom: -30px;
                 position: relative;
@@ -80,8 +80,10 @@
                         width: 100%;
                         text-align: center;
                         position: relative;
-                        border: 3px solid #e6e6e6;
+                        border: 2px solid #e6e6e6;
                         height: 200px;
+                        background: #00000000;
+                        backdrop-filter: blur(5px);
                         @include md {
                             height: 265px;
                         }
@@ -107,9 +109,10 @@
                             width: 100%;
                             text-align: center;
                             position: relative;
-                            filter: grayscale(1);
+                            // filter: grayscale(1);
                             object-fit: cover;
                             height: 100%;
+                            // opacity: 0;
                         }
                     }
 

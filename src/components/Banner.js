@@ -1,7 +1,8 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import btn1 from '../assests/btn-bac.svg'
-import video from '../assests/Video/two.mp4'
+import video from '../assests/Video/three.mp4'
+import video4 from '../assests/Video/four.mp4'
 import { AppContext } from '../context/AppContext'
 import '../scss/banner.scss'
 import ContactForm from './ContactForm'
@@ -9,6 +10,7 @@ import InquiryForm from './InquiryForm'
 const Banner = () => {
   const imageRef = useRef(null)
   const [creatorsForm, setCreatorsForm] = useState(false)
+  const [videoToggle, setVideoToggle] = useState(true)
   const [inquiryFormShow, setInquiryFormShow] = useState(false)
   const {
     account,
@@ -67,6 +69,7 @@ const Banner = () => {
 
                 <span> CONTENT CREATORS</span>
               </Link>
+
             </div>
 
           </div>

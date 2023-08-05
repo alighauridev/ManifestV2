@@ -4,13 +4,12 @@ import { Back, gsap } from 'gsap'
 import { Power4 } from 'gsap/gsap-core'
 import { useEffect, useRef, useState } from 'react'
 import { ImCross } from 'react-icons/im'
-import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper'
+import { Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { collection } from '../assests/data'
 import '../scss/Collection.scss'
 
 const Collection = ({ ease }) => {
@@ -51,15 +50,15 @@ const Collection = ({ ease }) => {
     }, [item])
     console.log(id)
     const tl = new gsap.timeline()
-    const handleModel = (idd) => {
-        const filterItem = collection.filter((ite) => {
-            return ite.id === idd
-        })
+    // const handleModel = (idd) => {
+    //     const filterItem = collection.filter((ite) => {
+    //         return ite.id === idd
+    //     })
 
-        setModal(true)
-        setId(filterItem)
-    }
-    window.addEventListener('scroll', () => {})
+    //     setModal(true)
+    //     setId(filterItem)
+    // }
+    window.addEventListener('scroll', () => { })
     useEffect(() => {
         tl.to('.contain', 0.5, {
             scale: modal ? 1 : 0,
@@ -93,7 +92,7 @@ const Collection = ({ ease }) => {
             offset: 100,
         })
     }, [])
-    SwiperCore.use([Autoplay])
+    // SwiperCore.use([Autoplay])
 
     return (
         <>
@@ -114,7 +113,6 @@ const Collection = ({ ease }) => {
                 </div>
                 <div className='container'>
                     <Swiper
-                        effect={'coverflow'}
                         grabCursor={true}
                         centeredSlides={true}
                         slidesPerView={item}
@@ -135,30 +133,28 @@ const Collection = ({ ease }) => {
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[EffectCoverflow, Pagination]}
+                        modules={[Pagination]}
                         className='mySwiper'
                     >
-                        {collection.map((item, i) => {
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((item, i) => {
                             return (
                                 <SwiperSlide key={i} className='item'>
                                     <div
                                         className={`nft `}
                                         data-aos-delay={10 * i}
-                                        onClick={() => handleModel(item.id)}
+                                    // onClick={() => handleModel(item.id)}
                                     >
                                         <div className='top'>
                                             <img
-                                                src='images/logo.gif'
+                                                src='https://static.cdprojektred.com/cms.cdprojektred.com/16x9_middle/70f9ff31d3b5769cdc6163953466eaaedd9532ac-592x334.jpg'
                                                 alt=''
                                             />
-                                            <h4>{item.name}</h4>
+                                            {/* <h4>{item.name}</h4> */}
                                         </div>
                                         <div className='img'>
                                             <img
                                                 src={
-                                                    item.path
-                                                        ? item.path
-                                                        : `/images/nft/2.png`
+                                                    "https://static.cdprojektred.com/cms.cdprojektred.com/16x9_middle/70f9ff31d3b5769cdc6163953466eaaedd9532ac-592x334.jpg"
                                                 }
                                                 alt=''
                                             />
@@ -169,78 +165,7 @@ const Collection = ({ ease }) => {
                         })}
                     </Swiper>
                 </div>
-                <div
-                    className='pop'
-                    style={
-                        modal
-                            ? {
-                                  transform: 'translate(-50%, -50%) scale(1)',
-                                  opacity: '1',
-                              }
-                            : {
-                                  transform: 'translate(-50%, -50%) scale(0)',
-                                  opacity: '0',
-                              }
-                    }
-                    onClick={() => setModal(false)}
-                >
-                    {id?.map((item, i) => {
-                        return (
-                            <div className='contain'>
-                                <ImCross onClick={() => setModal(false)} />
-                                <div className='head'>
-                                    <h3>{item.name}</h3>
-                                    <p>
-                                        Humanoids Back on planet Earth, a new
-                                        version of humans was created. Humanoids
-                                        developed human abilities by using
-                                        complex technologies and became V2.0 of
-                                        humans. They are full of creativity,
-                                        innovation and improvisation. Their
-                                        human nature allows them to triumph over
-                                        their opponents, although sometimes
-                                        their emotions get the best of them.
-                                    </p>
-                                </div>
-                                <div className='grid'>
-                                    <div className='img'>
-                                        <img
-                                            data-aos='zoom-out'
-                                            src={item.path}
-                                            alt=''
-                                            className='pop-image'
-                                        />
-                                    </div>
-                                    <div className='detail'>
-                                        <ul>
-                                            {[
-                                                12, 32, 43, 12, 32, 1, 343, 56,
-                                                76, 78, 79, 89,
-                                            ].map((ite) => {
-                                                return (
-                                                    <li>
-                                                        <h4>Power</h4>
-                                                        <div>
-                                                            <div
-                                                                className='widdd'
-                                                                style={{
-                                                                    width: `${Math.floor(
-                                                                        Math.random() *
-                                                                            100,
-                                                                    )}%`,
-                                                                }}
-                                                            ></div>
-                                                        </div>
-                                                    </li>
-                                                )
-                                            })}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
+
             </section>
         </>
     )

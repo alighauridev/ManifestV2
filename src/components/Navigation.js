@@ -5,13 +5,15 @@ import "../scss/navigation.scss";
 import { FaDiscord } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import logo1 from "../assests/logobig.png";
+import logo1 from "../assests/LABS2b.png";
+import logo from "../assests/logo.png";
 import { LinkOff, LinkOffOutlined, LinkRounded } from "@material-ui/icons";
 import { AppContext } from "../context/AppContext";
 import { ethers } from 'ethers';
 const Navigation = () => {
   const [navToggler, setNavToggler] = useState(false);
   const [navColor, setNavColor] = useState(false);
+  const [toggleImage, setToggleImage] = useState(false)
   const [scroll, setScroll] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false); // Added state to track wallet connection status
   const NFT_COLLECTIONS = [
@@ -32,29 +34,7 @@ const Navigation = () => {
     networkId,
   } = useContext(AppContext);
 
-  useEffect(() => {
-    if (account) {
-      setWalletConnected(true);
-      console.log(account);
-      logWalletBalance()
-    } else {
-      setWalletConnected(false);
-    }
-  }, [account]); // Set walletConnected state based on the account state
 
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-    if (window.scrollY >= 70) {
-      setNavColor(true);
-    } else {
-      setNavColor(false);
-      setNavToggler(false);
-    }
-  });
 
   function barBtn() {
     setNavToggler(!navToggler);
@@ -121,16 +101,45 @@ const Navigation = () => {
       return Promise.reject({ message: 'Something went wrong.' });
     }
   };
+  useEffect(() => {
+    if (account) {
+      setWalletConnected(true);
+      console.log(account);
+      logWalletBalance()
+    } else {
+      setWalletConnected(false);
+    }
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+      if (window.scrollY >= 70) {
+        setNavColor(true);
+      } else {
+        setNavColor(false);
+        setNavToggler(false);
+      }
+    });
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("scroll", () => { });
+    };
+
+  }, [account]);
   return (
     <>
-      <header className={navToggler ? "nav__active" : ""}>
+      <header className={navToggler ? "nav__active" : ""} >
         <div className="outer">
           <div className="container">
             <div className="nav__grid">
               <div className="logo">
-                <a href="#">
-                  <img src={logo1} alt="" />
-                </a>
+                <Link to="" onClick={() => setToggleImage(!toggleImage)}>
+                  <img src={toggleImage ? logo1 : logo} alt="" />
+                </Link>
               </div>
               <nav style={navToggler ? { display: "flex" } : null}>
                 <ul className={navToggler ? "ul__active" : ""}>

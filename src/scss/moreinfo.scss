@@ -11,27 +11,13 @@
     position: relative;
     z-index: 1;
     background-color: transparent !important;
-    padding: 80px 0px 140px 0px;
+    padding: 0px 0px 140px 0px;
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-position: 20px calc(100% - 20px);
-    background-repeat: repeat-x;
-
-    background-position: bottom center;
-    background-image: url('../assests/bac-main.png');
-    position: relative;
-
-    background-position: top 40px center, top;
-    background-repeat: repeat-x, repeat;
-    background-image: url('https://www.cyberpunk.net/build/images/noise-gradient-af9cb7ed.png');
-    background-position: top, top 440px center;
-    background-repeat: repeat-x, repeat-x;
-
-    height: 640px;
-    // margin-top: -119px;
-    justify-content: end;
+    height: 100%;
+    justify-content: start;
     @include md {
         height: unset;
     }
@@ -44,7 +30,7 @@
         background-image: url('../assests/bac-main.png');
 
         background-position: bottom;
-        top: 50px;
+        top: -33px;
         background-repeat: repeat-x;
         content: '';
         display: block;
@@ -57,6 +43,7 @@
         z-index: 1;
         background-size: 70px;
         left: 0px;
+        height: 460px;
     }
     &::after {
         background-image: url('../assests/noise-pattern-90c709f6.png');

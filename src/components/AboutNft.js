@@ -1,202 +1,145 @@
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import '../scss/aboutnft.scss'
-import img2 from "../assests/Images/DogeHub.webp";
-import img3 from "../assests/New/dogewin.webp";
-import img4 from "../assests/for about us.png"
-const AboutNft = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1200,
-            offset: 100,
-        })
-    }, [])
+import { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import btn1 from '../assests/btn-bac.svg'
+import img2 from '../assests/p  (2).jpg'
+import img3 from '../assests/p  (3).jpg'
+import img1 from '../assests/p1.jpg'
+import '../scss/about.scss'
+import ProjectModal from './ProjectModal'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+// import required modules
+import { Pagination, Autoplay } from 'swiper/modules'
+const About = () => {
+    const [active, setActive] = useState(null)
+    console.log(active)
+
+    const projects = [
+        {
+            name: 'Owlpha',
+            description: '',
+            banner: img1,
+            nfts: ['https://i.seadn.io/gcs/files/00d65550349cd877d3e77bae9089813a.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/00d65550349cd877d3e77bae9089813a.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/adf7ccd62d9d5bb1f14db7189d7c6abd.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/2b20db0d00b1dd09c483daea9334f44b.png?auto=format&dpr=1&w=384  ', 'https://i.seadn.io/gcs/files/ffab048aad6026289ccb91603adeacbc.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/3452a6c4d4eba05d84f9418403f77faf.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/c0a7aae89a8c1496ca169f4f432acbb4.png?auto=format&dpr=1&w=384', 'https://i.seadn.io/gcs/files/d16302f5428c46e003c837ef148e6a40.png?auto=format&dpr=1&w=384'],
+            website: 'https://owlpha.io/',
+            twitter: 'https://twitter.com/OwlphaNFT',
+            discord: 'https://discord.gg/mnfstlabs',
+            opensea: 'https://opensea.io/collection/owlpha',
+            magicEden: 'https://magiceden.io/collections/polygon/owlpha',
+        },
+        {
+            name: 'Galactic Eagles',
+            description: '',
+            banner: img2,
+            nfts: ['', '', ''],
+            website: '',
+            twitter: 'https://twitter.com/GEGNFT',
+            discord: 'https://discord.gg/mnfstlabs',
+            opensea: 'https://opensea.io/collection/galactic-eagle-gang-1',
+            magicEden:
+                'https://magiceden.io/collections/polygon/galactic_eagle_gang',
+        },
+        {
+            name: 'Ring Runnerz',
+            description: '',
+            banner: img3,
+            nfts: ['', '', ''],
+            website: 'https://ringrunnerz.xyz/',
+            twitter: 'https://twitter.com/RingRunnerz',
+            discord: 'https://discord.gg/mnfstlabs',
+            opensea: 'https://opensea.io/collection/ringrunnerz-nft',
+            magicEden: 'https://magiceden.io/collections/polygon/ring_runnerz',
+        },
+        {
+            name: 'Bombas',
+            description: '',
+            banner: img1,
+            nfts: [''],
+            website: 'https://bombaclot.xyz/',
+            twitter: 'https://twitter.com/bombaclotnft',
+            discord: 'https://discord.gg/mnfstlabs',
+            opensea: 'https://opensea.io/marketplace/bombaclot',
+            magicEden: '',
+        },
+        {
+            name: 'Region79',
+            description: '',
+            banner: img2,
+            nfts: [''],
+            website: 'https://www.region79.xyz/',
+            twitter: 'https://twitter.com/Region79nft',
+            discord: 'https://discord.gg/mnfstlabs',
+            opensea: 'https://opensea.io/marketplace/region79',
+            magicEden: '',
+        },
+    ]
 
     return (
         <>
-            {/* <div className="mar">
-        <Marquee
-          Reverse={false}
-          speed={100}
-          background="#fff"
-          height="80px"
-          gradient={false}
-        >
-          {[1, 2, 3, 4, 5, 6].map((item, index) => {
-            return (
-              <h1
-                style={{
-                  textTransform: "uppercase",
-                  marginRight: "20px",
-                  fontWeight: "700",
-                  fontSize: "20px !important",
-                  width: "400px",
-                  color: "black",
-                }}
-              >
-                Skeleton Shop
-              </h1>
-            );
-          })}
-        </Marquee>
-      </div> */}
-            <section id='about' className='about'>
+            <section id='about'>
                 <div className='container'>
-                    <h1>
-                        <h1>Doge Rush</h1> - Gaming, Gaining, and Winning in the Crypto World
-                    </h1>
-                    <div className='about__grid first'>
-                        <div
-                            className='img aos-init aos-animate'
-                            data-aos='zoom-out'
-                            data-aos-delay='400'
-                        >
-                            <img src={img4} style={{
-                                width: '100%',
-                                borderRadius: '0px',
-                                height: '500px',
-                                objectFit: 'contain'
-                            }} alt='' />
-                        </div>
-                        <div
-                            data-aos='fade-up'
-                            className='aos-init aos-animate details'
-                        >
-                            <div>
-                                <div>
-                                    <span>THE STORY</span>
-                                </div>
-                                <h1>The Ultimate   <h1 >Meme Coin</h1>Revolution</h1>
-                            </div>
-                            <p>
-                                <span>
-                                    Welcome to Doge Rush, the unstoppable force in the meme coin universe! We're smashing boundaries, fusing viral internet culture with real-world utilities. We're the first to do this. And who's leading the charge? Only the most iconic duo: Doge and Elon. Here, memes aren't just about fun; they're about strategic financial growth. We're creating an epic story, and you're invited to be part of it.
-                                </span>
-
-                            </p>
-                            <div className='btns'>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='https://t.me/DogeRushCommunity'
-                                    target={'_blank'}
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Join Community</button>
-                                </a>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='#buy'
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Buy Now</button>
-                                </a>
-                            </div>
-                        </div>
+                    <div className='heading'>
+                        <h1 data-aos=''>PROJECTS</h1>
                     </div>
-                    <div className='about__grid even'>
-                        <div
-                            className='img aos-init aos-animate'
-                            data-aos='zoom-out'
-                            data-aos-delay='400'
-                        >
-                            <img src={img2} alt='' />
-                        </div>
-                        <div
-                            data-aos='fade-up'
-                            className='aos-init aos-animate details'
-                        >
-                            <div>
-                                <div>
-                                    <span>THE STORY</span>
-                                </div>
-                                <h1>Dive into <h1>DogeHub</h1> Turning Playtime into Paytime </h1>
-                            </div>
-                            <p>
-                                <span>
-                                    Imagine playing Subway Surfers, Sonic Dash, and Temple Run but with a thrilling twist: your favorite internet heroes, Doge and Elon, are the stars. That's DogeHub, our state-of-the-art gaming platform. But we're not just giving classic games a new face; we're changing the rules of the game. In DogeHub, your gaming skills translate into Doge Rush tokens. Play, score, earn - it's as simple and exciting as that!
-                                </span>
+                    <div className='content'>
+                        <div className='layer'></div>
 
-                            </p>
-                            <div className='btns'>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='https://t.me/DogeRushCommunity'
-                                    target={'_blank'}
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Join Community</button>
-                                </a>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='#buy'
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Buy Now</button>
-                                </a>
-                            </div>
+                        <div className='imges' data-aos=''>
+                            <Swiper
+                                slidesPerView={4}
+                                spaceBetween={15}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                modules={[Pagination, Autoplay]} // Include Autoplay module here
+                                loop={true}
+                                autoplay={{ delay: 3000 }} // Set the autoplay delay to 3000 milliseconds (3 seconds)
+                                className='mySwiper'
+                            >
+                                {projects.map((project) => {
+                                    return (
+                                        <>
+                                            <SwiperSlide>
+                                                {' '}
+                                                <div
+                                                    className='box'
+                                                    onClick={() => {
+                                                        setActive(project)
+                                                    }}
+                                                >
+                                                    <img
+                                                        src={project.banner}
+                                                        alt=''
+                                                    />
+                                                    <div className='upper'>
+                                                        <div className='btn'>
+                                                            <img
+                                                                src={btn1}
+                                                                alt=''
+                                                            />
+                                                            <span>
+                                                                View Details
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        </>
+                                    )
+                                })}
+                            </Swiper>
                         </div>
-                    </div>
-                    <div className='about__grid'>
-                        <div
-                            className='img aos-init aos-animate'
-                            data-aos='zoom-out'
-                            data-aos-delay='400'
-                        >
-                            <img src={img3} style={{ objectFit: 'cover' }} alt='' />
-                        </div>
-                        <div
-                            data-aos='fade-up'
-                            className='aos-init aos-animate details'
-                        >
-                            <div>
-                                <div>
-                                    <span>THE STORY</span>
-                                </div>
-                                <h1>Explore &nbsp;
-                                    <h1>DogeWin</h1> The Ultimate Crypto Prize Arena
-                                </h1>
-                            </div>
-                            <p>
-                                <span>
-                                    Here's where things get really exciting. DogeWin, our second utility, is a treasure trove of crypto rewards. Enter raffles, compete, and stand a chance to win enticing prizes. From sought-after NFTs to hefty amounts of ETH, the rewards are massive. Winning has never been more fun!
-
-                                </span>
-                                <span>
-                                    Doge Rush isn't just another crypto project; it's a revolution. We're not just redefining meme coins; we're reshaping the crypto landscape. Become part of a project that merges fun, finance, and tech in ways never seen before. Join Doge Rush, and be part of the most exciting meme coin revolution.
-                                </span>
-
-                            </p>
-                            <div className='btns'>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='https://t.me/DogeRushCommunity'
-                                    target={'_blank'}
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Join Community</button>
-                                </a>
-                                <a
-                                    style={{ display: 'inline-block' }}
-                                    href='#buy'
-                                    class='item-desc aos-init aos-animate'
-                                    data-aos='notific-right'
-                                >
-                                    <button>Buy Now</button>
-                                </a>
-                            </div>
-                        </div>
+                        <div className='layer'></div>
                     </div>
                 </div>
+                {active && (
+                    <ProjectModal active={active} setActive={setActive} />
+                )}
             </section>
         </>
     )
 }
 
-export default AboutNft
+export default About

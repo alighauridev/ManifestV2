@@ -4,15 +4,14 @@
 #footer {
     position: relative;
     background-color: #000;
-    height: 100vh;
     display: flex;
     align-items: end;
     justify-content: center;
-    @include md{
+    @include md {
         height: 100%;
     }
     .container {
-        max-width: 1200px;
+        max-width: 1300px;
         padding: 60px 20px;
         display: flex;
         flex-direction: column;
@@ -36,14 +35,14 @@
         }
 
         span {
-           color: #e6e9e9;
-    font-size: 16px;
-    font-weight: 300;
-    position: relative;
-    text-decoration: none;
-    font-family: 'blender';
-    letter-spacing: 2px;
-    text-align: center;
+            color: #e6e9e9;
+            font-size: 16px;
+            font-weight: 300;
+            position: relative;
+            text-decoration: none;
+            font-family: 'blender';
+            letter-spacing: 2px;
+            text-align: center;
         }
 
         .icons {
