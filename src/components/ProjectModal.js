@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom'
 
 const ProjectModal = ({ setActive, active }) => {
     const [mainImg, setMainImg] = useState(null)
+    const [activeImage, setActiveImage] = useState(null)
     return (
         <div
             className='model'
             style={active ? { display: 'flex', opacity: '1' } : null}
-            onClick={() => {
-                setActive(false)
-            }}
+
         >
             <div
                 className='center'
@@ -21,22 +20,23 @@ const ProjectModal = ({ setActive, active }) => {
                 <div
                     className='cross'
                     onClick={() => {
-                        setActive(false)
+                        setActive(null)
                     }}
                 >
-                    <img src='/images/bb (2).png' alt='' />
+                    <img loading='lazy' src='/images/bb (2).png' alt='' />
                 </div>
                 <div className='start'>
                     <div className='main'>
-                        <img src={active?.banner} alt='' />
+                        <img loading='lazy' src={active?.banner} alt='' />
                     </div>
                     <div className='gallery'>
                         {active.nfts.map((img) => {
                             return (
                                 <img
-                                    onClick={() => setMainImg(img)}
+                                    onClick={() => setActiveImage(img)}
                                     src={img}
                                     alt=''
+                                    loading='lazy'
                                 />
                             )
                         })}
@@ -79,6 +79,23 @@ const ProjectModal = ({ setActive, active }) => {
                     </p>
                 </div>
             </div>
+
+            {
+                activeImage && <div className="img__model" style={active ? { display: 'flex', opacity: '1' } : null}>
+                    <div className="img">
+                        <div
+                            className='cross'
+                            onClick={() => {
+                                setActiveImage(false)
+                            }}
+                        >
+                            <img loading='lazy' src='/images/bb (2).png' alt='' />
+
+                        </div>
+                        <img src={activeImage} loading='lazy' alt="" />
+                    </div>
+                </div>
+            }
         </div>
     )
 }

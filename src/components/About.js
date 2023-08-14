@@ -5,6 +5,15 @@ import img2 from '../assests/p  (2).jpg'
 import img3 from '../assests/p  (3).jpg'
 import img1 from '../assests/p1.jpg'
 // Import Swiper styles
+import bomb1 from "../assests/Bombas/1-1s/10a42b8b65d2cf73a6444f59e3425639.jpg"
+import bomb2 from "../assests/Bombas/1-1s/1ca1d6fd5a5ce02f5d01f31c35f3cd45.jpg"
+import bomb3 from "../assests/Bombas/1-1s/3033.jpg"
+import bomb4 from "../assests/Bombas/1-1s/4047.jpg"
+import bomb5 from "../assests/Bombas/1-1s/4223.jpg"
+import bomb6 from "../assests/Bombas/1-1s/5279.jpg"
+import bomb7 from "../assests/Bombas/1-1s/688.jpg"
+import bomb8 from "../assests/Bombas/1-1s/d0db220e1d87bc58a6be9e4deeef9b12.jpg"
+import bombBanner from "../assests/Bombas/PFP.png"
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -96,9 +105,9 @@ export default function About() {
     {
       name: 'Bombas',
       description: '',
-      banner: img1,
-      logo: "",
-      nfts: [''],
+      banner: bombBanner,
+      logo: bomb1,
+      nfts: [bomb1, bomb2, bomb3, bomb4, bomb5, bomb5, bomb6, bomb7],
       website: 'https://bombaclot.xyz/',
       twitter: 'https://twitter.com/bombaclotnft',
       discord: 'https://discord.gg/mnfstlabs',
@@ -116,7 +125,7 @@ export default function About() {
             <h1 data-aos=''>PROJECTS</h1>
           </div>
           <div className='content'>
-            <Swiper
+            {/* <Swiper
               slidesPerView={3}
               spaceBetween={15}
               navigation={true}
@@ -125,38 +134,37 @@ export default function About() {
               }}
               modules={[Pagination, Navigation]}
               className='mySwiper'
-            >
-              {projects.map((project) => {
-                return (
-                  <>
-                    <SwiperSlide>
-                      <div
-                        className='box'
-                        onClick={() => {
-                          setActive(project)
-                        }}
-                      >
+            > */}
+            {projects.map((project) => {
+              return (
+                <>
+                  <div
+                    className='box'
+                    onClick={() => {
+                      setActive(project)
+                    }}
+                  >
+                    <img
+                      src={project.logo}
+                      alt=''
+                      loading='lazy'
+                    />
+                    <div className='upper'>
+                      <div className='btn'>
                         <img
-                          src={project.logo}
+                          src={btn1}
                           alt=''
                         />
-                        <div className='upper'>
-                          <div className='btn'>
-                            <img
-                              src={btn1}
-                              alt=''
-                            />
-                            <span>
-                              {project.name}
-                            </span>
-                          </div>
-                        </div>
+                        <span>
+                          {project.name}
+                        </span>
                       </div>
-                    </SwiperSlide>
-                  </>
-                )
-              })}
-            </Swiper>
+                    </div>
+                  </div>
+                </>
+              )
+            })}
+            {/* </Swiper> */}
           </div>
         </div>
         {active && (

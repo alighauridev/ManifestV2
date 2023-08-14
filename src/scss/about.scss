@@ -103,6 +103,9 @@
             align-items: start;
             justify-content: center;
             row-gap: 30px;
+            flex-direction: revert;
+            flex-wrap: wrap;
+            gap: 30px;
 
             .heading {
                 img {
@@ -308,7 +311,7 @@
         z-index: 1000;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(8px);
-        right: 20px;
+        right: 0px;
         .center {
             padding: 20px 20px;
             display: grid;
@@ -362,12 +365,15 @@
                 }
             }
             .start {
+                display: grid;
                 .main {
+                    max-height: 250px;
+                    height: 100%;
+                    min-height: 250px;
                     > img {
                         width: 100%;
                         object-fit: cover;
                         border: 2px solid #18d1c8;
-                        min-height: 250px;
                         height: 100%;
                     }
                 }
@@ -454,6 +460,50 @@
                     font-family: 'blender';
                     color: #e2e2e2;
                     transition: all 0.6s ease-out;
+                }
+            }
+        }
+        .img__model {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0px;
+            height: 100vh;
+            width: 100%;
+            background: #0000001a;
+            transition: all 0.8s ease-out;
+            z-index: 1000;
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
+            right: 0px;
+            .img {
+                height: 90vh;
+                margin: auto;
+                position: relative;
+                width: 100%;
+                max-width: 560px;
+                text-align: center;
+                .cross {
+                    filter: invert(1);
+                    width: 35px;
+                    position: absolute;
+                    right: 10px;
+                    cursor: pointer;
+                    top: 10px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+                img {
+                    border-radius: 0.3em !important;
+                    box-shadow: rgba(7, 7, 7, 0.2) 0px;
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                    margin: auto;
+                    cursor: pointer;
                 }
             }
         }
