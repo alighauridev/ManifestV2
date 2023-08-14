@@ -25,9 +25,9 @@ const Loader = ({ setLoading }) => {
 
     return (
         <section className='loader'>
-            <img src={logo} className='loader__logo' />
+            <img src={logo} className='loader__logo blinking' />
             <div className='progress__wrapper'>
-                <LinearProgress variant='determinate' value={progress} />
+                {/* <LinearProgress variant='determinate' value={progress} /> */}
             </div>
         </section>
     )

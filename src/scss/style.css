@@ -102,3 +102,19 @@ main {
     border-radius: 0;
     transform: scale(1.2) rotate(45deg);
 }
+/* loader.scss */
+.blinking {
+    animation: blink 3s infinite;
+}
+
+@keyframes blink {
+    0%,
+    50%,
+    100% {
+        opacity: 0.5;
+    }
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
