@@ -29,7 +29,7 @@ export default function About() {
   const projects = [
     {
       name: 'Owlpha',
-      description: '',
+      description: "Owlpha is a distinctive genesis collection that marks the beginning of a creative revolution. As the flagship project of MNFST Labs, it captures the essence of wisdom and mystery in a series of unique digital art pieces. Each piece in the Owlpha collection is more than a collectible. It's a gateway to an exclusive and evolving world of creativity",
       banner: "https://i.seadn.io/gcs/files/c3be9265597b9f94685d95024d99799d.jpg?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/48d0c6fe91b0432cb80d03f32673c842.jpg?auto=format&dpr=1&w=256",
       nfts: [
@@ -50,7 +50,7 @@ export default function About() {
     },
     {
       name: 'Galactic Eagles',
-      description: '',
+      description: 'Galactic Eagle Gang is an exhilarating airdrop collection for all Owlpha holders. Soaring beyond traditional boundaries, this project symbolizes freedom, unity, and exploration in the blockchain universe. It connects our community of holders with shared interests and passions, elevating the collective experience within the MNFST Labs ecosystem.',
       banner: "https://i.seadn.io/gcs/files/f9004818c1446d4eafbccac65cb2af6d.png?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/5c4d6c6a4a958b28567c376f2ed2c8e8.png?auto=format&dpr=1&w=256",
       nfts: ['https://i.seadn.io/gcs/files/91983d47f737fc26308cd494819a779b.png?auto=format&dpr=1&w=256', 'https://i.seadn.io/gcs/files/302b9a9af78f96ba4b64811eb3df5b42.png?auto=format&dpr=1&w=256',
@@ -71,7 +71,7 @@ export default function About() {
     },
     {
       name: 'Ring Runnerz',
-      description: 'https://i.seadn.io/gcs/files/ab8897d354a264d1b823fb5f18872cf7.jpg?auto=format&dpr=1&w=1920',
+      description: "Ring Runnerz introduces a 'play-to-experience' model that engages users in an immersive gaming universe. It's more than a game. It's an innovative blend of entertainment and earning, where players can actively shape their destinies. Ring Runnerz brings a thrilling, interactive layer to the MNFST Labs multiverse, setting the stage for endless adventures and opportunities.",
       banner: "https://i.seadn.io/gcs/files/ab8897d354a264d1b823fb5f18872cf7.jpg?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/f530eb01ed817788a7388c93087e1ae1.gif?auto=format&dpr=1&w=256",
       nfts: ['https://i.seadn.io/gcs/files/6f2ca357bab5e0f904187bb5de5a3c0d.png?auto=format&dpr=1&w=256', 'https://i.seadn.io/gcs/files/d83fd93af857e6080c567af1e530cea1.png?auto=format&dpr=1&w=256',
@@ -92,7 +92,7 @@ export default function About() {
     },
     {
       name: 'Region79',
-      description: '',
+      description: "Region 79 is a gateway to Planet79, inviting our holders to explore a world brimming with unique challenges and experiences. Nestled within MNFST Lab's innovative gaming universe on the Solana NFT Space. Region 79 offers a community- driven adventure where the opportunities are as boundless as our holders' imaginations.",
       banner: 'https://pbs.twimg.com/profile_banners/1587005047140818945/1681838624/600x200',
       logo: "https://pbs.twimg.com/profile_images/1648376776371077120/Qdhl8CI4_400x400.jpg",
       nfts: [''],
@@ -104,7 +104,7 @@ export default function About() {
     },
     {
       name: 'Bombas',
-      description: '',
+      description: 'Bombaz represents MNFST Labs innovative leap into the Solana blockchain, connecting it with our roots in Polygon.This collection is about accessibility, symbolizing our commitment to making creativity possible and affordable through low minting prices.Bombaz is a pioneering effort that reflects our vision, transcending barriers and embracing endless possibilities.',
       banner: bombBanner,
       logo: bomb1,
       nfts: [bomb1, bomb2, bomb3, bomb4, bomb5, bomb5, bomb6, bomb7],

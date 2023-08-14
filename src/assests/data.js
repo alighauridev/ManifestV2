@@ -6,7 +6,7 @@ import img5 from "../assests/MNFST TEAM SECTION/MHK.png";
 
 export const nav = [
   {
-    name: "PROJECT",
+    name: "PROJECTS",
     path: "#projects",
   },
   {

@@ -48,6 +48,10 @@
     font-family: 'Rubik', system-ui;
     text-decoration: none !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
     height: 100%;

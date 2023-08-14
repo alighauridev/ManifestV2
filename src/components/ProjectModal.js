@@ -46,36 +46,30 @@ const ProjectModal = ({ setActive, active }) => {
                     <h2>{active.name}</h2>
                     <div className="flex">
                         <div className='links'>
-                            <a className='website' href={active.website}>
+                            <a className='website' href={active.website} target='_blank'>
                                 <BsGlobe />
                             </a>
-                            <a className='twitter' href={active.twitter}>
+                            <a className='twitter' href={active.twitter} target='_blank'>
                                 <BsTwitter />
                             </a>
-                            <a className='discord' href={active.discord}>
+                            <a className='discord' href={active.discord} target='_blank'>
                                 <BsDiscord />
                             </a>
-                            <a className='opensea' href={active.opensea}>
+                            <a className='opensea' href={active.opensea} target='_blank'>
                                 <SiOpensea />
                             </a>
                             {/* <a className='magicEden' href={active.magicEden}>
                             <BsGlobe />
                         </a> */}
                         </div>
-                        <Link to={active.opensea}>
+                        <Link to={active.opensea} target='_blank'>
                             <button>View Collection!</button>
                         </Link>
                     </div>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Sint minima ducimus porro nulla perferendis
-                        deleniti magnam nihil, quis sit laborum, quaerat eius
-                        perspiciatis hic ad quos temporibus. Accusantium, esse
-                        modi? Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Ab officia suscipit accusantium
-                        expedita dolorum qui. Distinctio, at esse iste deleniti,
-                        aspernatur quidem, eum maxime ullam quos harum ut. Rem,
-                        perspiciatis?
+                        {
+                            active.description
+                        }
                     </p>
                 </div>
             </div>

@@ -68,6 +68,10 @@ header {
                     0px 12px
                 );
                 overflow: hidden;
+                @include md {
+                    overflow: unset;
+                    clip-path: none;
+                }
                 &::before {
                     content: '';
                     right: 4px;

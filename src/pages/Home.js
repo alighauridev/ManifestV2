@@ -36,11 +36,11 @@ const Home = () => {
       <div className="page second-page">
         <MoreInfo />
       </div>
-      <div className="page third-page">
+      <div id='projects' className="page third-page">
         <About />
       </div>
 
-      <div className="page fourth-page">
+      <div id='mission' className="page fourth-page">
         <Mission />
       </div>
       <div className="page fourth-page">
