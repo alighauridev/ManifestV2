@@ -37,36 +37,47 @@
 }
 .terms {
     padding: 40px 0px;
+    margin-top: 100px;
     @include md {
         padding: 60px 0px;
     }
     .container {
-        max-width: 1300px;
+        max-width: 1200px;
         padding: 0 20px;
         margin: auto;
         ul {
             margin-left: 40px;
             margin-bottom: 5px;
+            color: #e6e6e6;
         }
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            font-family: refinery;
+            color: #e6e6e6;
         }
         h2 {
             font-size: 2rem;
+            color: #e6e6e6;
+            font-family: refinery;
             margin-bottom: 20px;
         }
         p {
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
             line-height: 1.3;
             color: #eee;
+            display: block;
+            font-family: 'blender';
+            font-weight: 200;
             span {
                 font-size: 18px;
                 margin-bottom: 5px;
                 line-height: 1.3;
                 color: #eee;
                 display: block;
+                font-family: 'blender';
+                font-weight: 200;
             }
         }
     }

@@ -137,8 +137,8 @@ const Navigation = () => {
           <div className="container">
             <div className="nav__grid">
               <div className="logo">
-                <Link to="" onClick={() => setToggleImage(!toggleImage)}>
-                  <img src={toggleImage ? logo1 : logo} alt="" />
+                <Link to="/" onClick={() => setToggleImage(!toggleImage)}>
+                  <img src={logo1} alt="" />
                 </Link>
               </div>
               <nav style={navToggler ? { display: "flex" } : null}>

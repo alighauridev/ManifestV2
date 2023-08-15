@@ -12,9 +12,9 @@ const MoreInfo = () => {
             </div>
 
             <div className="para" data-aos="">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quas nihil, consequuntur natus ipsam cum aut ipsa quisquam architecto! Magnam libero ab, nostrum illum nisi unde a explicabo quos, dolorum recusandae dolorem distinctio, eos voluptatem? Debitis vitae numquam praesentium. Iusto suscipit asperiores amet velit fuga rem commodi illum, corrupti aspernatur!
-              </p>
+              <p>We are MNFST Labs, a visionary collective committed to shaping the decentralized Web 3.0 landscape's future.</p>
+              <p>Through relentless innovation, we harness the potential of NFTs, weaving engaging and immersive experiences across our multiverse of interconnected projects and IPs. </p>
+              <p>Our mission extends beyond merely pioneering the NFT space. We strive to democratize access, empowering creators, startups, and innovators to reach new heights.</p>
             </div>
           </div>
 

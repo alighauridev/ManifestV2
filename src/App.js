@@ -9,6 +9,10 @@ import './scss/style.css'
 
 import ReactGA from 'react-ga'
 import Loader from './components/Loader';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Agreement from './pages/Aggrement';
+import Guidelines from './pages/GuideLines';
 function App() {
     let [loading, setLoading] = useState(true)
     let [color, setColor] = useState('#fff')
@@ -25,7 +29,14 @@ function App() {
                 <Loader setLoading={setLoading} />
             ) : (
                 <>
-                    <Home />
+                    <Routes>
+
+                        <Route path='/' element={<Home />} />
+                        <Route path='/terms' element={<Terms />} />
+                        <Route path='/privacy-policy' element={<Privacy />} />
+                        <Route path='/user-agreement' element={<Agreement />} />
+                        <Route path='/guidelines' element={<Guidelines />} />
+                    </Routes>
 
                 </>
             )}

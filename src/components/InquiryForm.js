@@ -177,8 +177,11 @@ const InquiryForm = ({ setInquiryFormShow }) => {
                 </div>
                 <div className="content">
                     <h2>Incubator Program</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga repellat deserunt debitis culpa laborum vel distinctio? Sapiente qui adipisci dicta repudiandae sint id aperiam iusto ratione neque asperiores hic, ex nisi, error voluptates alias placeat voluptatibus, et itaque ducimus ea culpa laborum reiciendis. Error aliquam, explicabo eligendi corrupti a tempora!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio dignissimos quibusdam provident repellat, nisi reprehenderit praesentium ipsum! Minus doloremque obcaecati explicabo deleniti nisi adipisci impedit vero, illo vel modi nam reiciendis dolorem earum animi cupiditate. Voluptatum iure quas impedit quo.</p>
+                    <p>Introducing the MNFST Lab Incubator Program — your gateway to transforming ideas into reality in the decentralized Web3 landscape.</p>
+                    <p>As pioneers in the NFT space, we at MNFST recognize the limitless potential of creative minds. </p>
+                    <p>Our Incubator Program is designed to empower creators, startups, and innovators to reach new heights. </p>
+                    <p>Whether you have a nascent concept or an emerging business, our tailor-made support system is here to guide you every step of the way.
+                    </p>
                 </div>
             </div>
         </div>

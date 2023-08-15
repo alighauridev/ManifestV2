@@ -40,6 +40,7 @@
                 font-family: 'refinery';
                 font-weight: 700;
                 line-height: 100%;
+                text-transform: uppercase;
 
                 @include md {
                     font-size: 55px;
@@ -99,7 +100,7 @@
                         color: #e6e9e9;
                         cursor: pointer;
                         list-style: none;
-                        font-size: 28px;
+                        font-size: 24px;
                         font-style: normal;
                         font-weight: 300;
                         padding: 20px 10px;
@@ -107,6 +108,7 @@
                         position: relative;
                         text-transform: uppercase;
                         transition: background-color 0.3s ease-in-out;
+                        line-height: 1.2;
 
                         @include md {
                             font-size: 15px;
@@ -173,8 +175,8 @@
                     bottom: 20px;
                     max-width: 500px;
                     transition: all 0.5s ease-in-out;
-                    padding: 30px 0px;
-
+                    padding: 30px 0px 5px;
+                    border-bottom: 3px solid #ffffff36;
                     @include md {
                         position: initial;
                     }
@@ -187,7 +189,7 @@
                         line-height: 120%;
                         color: #e6e9e9;
                         transition: all 0.5s ease-in-out;
-                        border-bottom: 3px solid #ffffff36;
+
                         padding-bottom: 10px;
 
                         @include md {

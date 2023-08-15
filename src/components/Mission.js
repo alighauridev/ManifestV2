@@ -23,7 +23,7 @@ const Mission = () => {
                   }}
                   data-aos=""
                 >
-                  Objective 1{" "}
+                  Creating Tangible Connections.
                 </li>
                 <li
                   className={tabs === "tab2" ? "set" : null}
@@ -32,7 +32,7 @@ const Mission = () => {
                   }}
                   data-aos=""
                 >
-                  Objective 2
+                  Crafting Immersive Narratives
                 </li>
                 <li
                   className={tabs === "tab3" ? "set" : null}
@@ -41,7 +41,7 @@ const Mission = () => {
                   }}
                   data-aos=""
                 >
-                  Objective 3
+                  Pioneering Real-World Tech Innovations.
                 </li>
               </ul>
               <span className="line"></span>
@@ -58,8 +58,10 @@ const Mission = () => {
                   <img src={m1} alt="" />
                   <div className="para" data-aos-not="fade">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, debitis nesciunt totam fuga voluptatibus eius corrupti veritatis maxime itaque cumque! Velit, illum quibusdam atque magni, sunt odit optio asperiores laborum vel eligendi possimus quas et quasi esse nobis impedit modi!
+                      We envision a future where digital collectibles come to life, transcending the screen to take physical form.
                     </p>
+                    <p>From exclusive toys to hoot energy products, we offer a unique blend of physical activations.</p>
+                    <p>These initiatives are designed to resonate with our community, setting the stage for immersive experiences.</p>
                   </div>
                 </div>
               </>
@@ -74,8 +76,10 @@ const Mission = () => {
                   <img src={"https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"} alt="" />
                   <div className="para" data-aos-not="fade">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, debitis nesciunt totam fuga voluptatibus eius corrupti veritatis maxime itaque cumque! Velit, illum quibusdam atque magni, sunt odit optio asperiores laborum vel eligendi possimus quas et quasi esse nobis impedit modi!
+                      At MNFST Labs, storytelling transforms digital assets into an immersive journey.
                     </p>
+                    <p>We create animation anime that brings our IPs to life, weaving intricate storylines.</p>
+                    <p>Our ambition goes beyond mere jpegs, building a big picture that resonates with our audience.</p>
                   </div>
                 </div>
               </>
@@ -90,8 +94,10 @@ const Mission = () => {
                   <img src={"https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"} alt="" />
                   <div className="para" data-aos-not="fade">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, debitis nesciunt totam fuga voluptatibus eius corrupti veritatis maxime itaque cumque! Velit, illum quibusdam atque magni, sunt odit optio asperiores laborum vel eligendi possimus quas et quasi esse nobis impedit modi!
+                      Innovation drives MNFST Labs, fueling our exploration of real-world tech that aligns with our digital universe.
                     </p>
+                    <p>We're at the forefront of crafting a new era of digital and physical integration, whether it's groundbreaking technology for creators, startups, or innovators.</p>
+                    <p> Our pursuit connects communities and sets new standards in the Web 3.0 landscape. </p>
                   </div>
                 </div>
               </>

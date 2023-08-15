@@ -3,6 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import btn1 from '../assests/btn-bac.svg'
 import img2 from '../assests/p  (2).jpg'
 import img3 from '../assests/p  (3).jpg'
+import reg1 from "../assests/R79 ASSETS/1-1_s/5540.jpg"
+import reg2 from "../assests/R79 ASSETS/1-1_s/5541.jpg"
+import reg3 from "../assests/R79 ASSETS/1-1_s/5542.jpg"
+import reg4 from "../assests/R79 ASSETS/1-1_s/5543.jpg"
+import reg5 from "../assests/R79 ASSETS/1-1_s/5551.jpg"
+import reg6 from "../assests/R79 ASSETS/1-1_s/5553.jpg"
+import reg7 from "../assests/R79 ASSETS/1-1_s/5554.jpg"
+import reg8 from "../assests/R79 ASSETS/1-1_s/5539 (1).jpg"
 import img1 from '../assests/p1.jpg'
 // Import Swiper styles
 import bomb1 from "../assests/Bombas/1-1s/10a42b8b65d2cf73a6444f59e3425639.jpg"
@@ -95,7 +103,7 @@ export default function About() {
       description: "Region 79 is a gateway to Planet79, inviting our holders to explore a world brimming with unique challenges and experiences. Nestled within MNFST Lab's innovative gaming universe on the Solana NFT Space. Region 79 offers a community- driven adventure where the opportunities are as boundless as our holders' imaginations.",
       banner: 'https://pbs.twimg.com/profile_banners/1587005047140818945/1681838624/600x200',
       logo: "https://pbs.twimg.com/profile_images/1648376776371077120/Qdhl8CI4_400x400.jpg",
-      nfts: [''],
+      nfts: [reg1, reg2, reg3, reg4, reg5, reg6, reg7, reg8],
       website: 'https://www.region79.xyz/',
       twitter: 'https://twitter.com/Region79nft',
       discord: 'https://discord.gg/mnfstlabs',

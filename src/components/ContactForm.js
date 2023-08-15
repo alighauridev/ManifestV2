@@ -164,12 +164,17 @@ const ContactForm = ({ setCreatorsForm }) => {
                 </div>
                 <div className="content">
                     <h2>Content Creators Form</h2>
-                    <p>The CONTENT CREATORS FORM is a comprehensive platform designed to empower and engage content creators across various digital mediums. It serves as a bridge between aspiring creators and their audience, providing an intuitive interface to share their unique creations with the world. Whether it's creating captivating videos, crafting compelling blog posts, or curating visually stunning images, this form caters to a diverse range of creative talents.</p>
+                    <p>Get started with the MNFST Lab Content Creator Form, a dynamic platform designed for artists and creators across all digital mediums.
+                    </p>
 
-                    <p>With a user-friendly layout and a wealth of features, the CONTENT CREATORS FORM allows creators to showcase their work, connect with their target audience, and receive valuable feedback. It also facilitates collaborations and networking opportunities, enabling creators to grow their influence and reach new heights in their creative endeavors. From seasoned professionals to budding enthusiasts, the platform welcomes all content creators, fostering a vibrant community of individuals passionate about making an impact through their artistry.
+                    <p>Whether you're a videographer, blogger, or visual artist, this platform is your pathway to connect with your audience, showcase your unique creations, and grow your influence.
 
 
 
+
+                    </p>
+                    <p>
+                        With user-friendly features for collaboration and feedback, we support all talents in making an impact through creativity.
 
                     </p>
                 </div>

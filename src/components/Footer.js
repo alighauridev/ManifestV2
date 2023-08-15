@@ -19,8 +19,10 @@ import logo from "../assests/TEXT.png"
 import { AiOutlineTwitter, AiOutlineTelegram } from "react-icons/ai";
 import "../scss/footer.scss";
 import { LinkRounded } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+
   return (
     <>
       <footer id="footer">
@@ -30,10 +32,10 @@ const Footer = () => {
           </div>
           <div className="top">
             <ul>
-              <a href="#">Terms of Use & Privacy Policy </a>
-              <a href="#">Careers</a>
-              <a href="#">User agreement</a>
-              <a href="#"> Guidelines</a>
+              <Link to="/privacy-policy">Privacy Policy </Link>
+              <Link to="/terms">Terms of Conditions </Link>
+              <Link to="/user-agreement">User agreement</Link>
+              <Link to="/guidelines"> MNFST Labs Website Guidelines.</Link>
               {/* <a href="#">REDmod</a> */}
             </ul>
           </div>
@@ -60,7 +62,8 @@ const Footer = () => {
           </div>
 
           <p style={{ maxWidth: "600px" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consequatur libero exercitationem voluptas ut velit, commodi asperiores ipsa dolorem doloremque magni neque hic error temporibus repudiandae debitis cupiditate suscipit tempore?
+            Venture with MNFST Labs in the Web 3.0 landscape. Dive into our universe of creativity and tech, uniting communities and shaping digital collectibles' future.
+
           </p>
           <span>© 2023 by MANIFEST LABS. All rights reserved!</span>
         </div>
