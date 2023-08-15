@@ -21,6 +21,34 @@ import bomb5 from "../assests/Bombas/1-1s/4223.jpg"
 import bomb6 from "../assests/Bombas/1-1s/5279.jpg"
 import bomb7 from "../assests/Bombas/1-1s/688.jpg"
 import bomb8 from "../assests/Bombas/1-1s/d0db220e1d87bc58a6be9e4deeef9b12.jpg"
+
+import owl1 from "../assests/OWLPHA ASSETS/1-1s/BATOWL.png"
+import owl2 from "../assests/OWLPHA ASSETS/1-1s/bowser.png"
+import owl3 from "../assests/OWLPHA ASSETS/1-1s/BUZZ LIGHTOWL.png"
+import owl4 from "../assests/OWLPHA ASSETS/1-1s/cell.png"
+import owl5 from "../assests/OWLPHA ASSETS/1-1s/OWLBEE.png"
+import owl6 from "../assests/OWLPHA ASSETS/1-1s/OWLIZARD.png"
+import owl7 from "../assests/OWLPHA ASSETS/1-1s/OWLMINATOR.png"
+import owl8 from "../assests/OWLPHA ASSETS/1-1s/SAMUROWL.png"
+
+import gal1 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/1d0fb00c1a260ed8ac58a90b8e4159af.jpg"
+import gal2 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/3d1654e2fd8645e620472b9d8cd5220e.jpg"
+import gal3 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/4c3803d0b967bb8de78cb5b143e14b61.jpg"
+import gal4 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/6f50d4479fe4e6ce56638789acbecb76.jpg"
+import gal5 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/893b9c5193a4918af4aad6073fd7299d.jpg"
+import gal6 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/a35d263ce447ed28d2f2f49e505b05ee.jpg"
+import gal7 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/ab9225f2087800b1680a5e415ad060f6.jpg"
+import gal8 from "../assests/GALACTIC EAGLES ASSETS/1-1_s/f3295abcd382fe4fce56ba2f166d7705.jpg"
+
+
+import rin1 from "../assests/RING RUNNERZ ASSETS/1-1_s/013180e61006a075d26b32911d3075de.jpg"
+import rin2 from "../assests/RING RUNNERZ ASSETS/1-1_s/348e55f3eda62896c18dfcc9d3ea7e0a.jpg"
+import rin3 from "../assests/RING RUNNERZ ASSETS/1-1_s/3cf3bbf71b23f1f6e79341c3c500cd12.jpg"
+import rin4 from "../assests/RING RUNNERZ ASSETS/1-1_s/bb0c6ab6bdd25c346df53e5822539033.jpg"
+import rin5 from "../assests/RING RUNNERZ ASSETS/1-1_s/c33a8cf1659fe49126239d0610ec73ba.jpg"
+import rin6 from "../assests/RING RUNNERZ ASSETS/1-1_s/da15168f83cc35307293a92a9501c169.jpg"
+import rin7 from "../assests/RING RUNNERZ ASSETS/1-1_s/dc9b06e7a4556c58c4b1ac1211420b4a.jpg"
+import rin8 from "../assests/RING RUNNERZ ASSETS/1-1_s/fddc244c0316bf56266266b40006da30.jpg"
 import bombBanner from "../assests/Bombas/PFP.png"
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -40,16 +68,7 @@ export default function About() {
       description: "Owlpha is a distinctive genesis collection that marks the beginning of a creative revolution. As the flagship project of MNFST Labs, it captures the essence of wisdom and mystery in a series of unique digital art pieces. Each piece in the Owlpha collection is more than a collectible. It's a gateway to an exclusive and evolving world of creativity",
       banner: "https://i.seadn.io/gcs/files/c3be9265597b9f94685d95024d99799d.jpg?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/48d0c6fe91b0432cb80d03f32673c842.jpg?auto=format&dpr=1&w=256",
-      nfts: [
-        'https://i.seadn.io/gcs/files/00d65550349cd877d3e77bae9089813a.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/00d65550349cd877d3e77bae9089813a.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/adf7ccd62d9d5bb1f14db7189d7c6abd.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/2b20db0d00b1dd09c483daea9334f44b.png?auto=format&dpr=1&w=384  ',
-        'https://i.seadn.io/gcs/files/ffab048aad6026289ccb91603adeacbc.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/3452a6c4d4eba05d84f9418403f77faf.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/c0a7aae89a8c1496ca169f4f432acbb4.png?auto=format&dpr=1&w=384',
-        'https://i.seadn.io/gcs/files/d16302f5428c46e003c837ef148e6a40.png?auto=format&dpr=1&w=384',
-      ],
+      nfts: [owl1, owl2, owl3, owl4, owl5, owl6, owl7, owl8],
       website: 'https://owlpha.io/',
       twitter: 'https://twitter.com/OwlphaNFT',
       discord: 'https://discord.gg/mnfstlabs',
@@ -61,15 +80,7 @@ export default function About() {
       description: 'Galactic Eagle Gang is an exhilarating airdrop collection for all Owlpha holders. Soaring beyond traditional boundaries, this project symbolizes freedom, unity, and exploration in the blockchain universe. It connects our community of holders with shared interests and passions, elevating the collective experience within the MNFST Labs ecosystem.',
       banner: "https://i.seadn.io/gcs/files/f9004818c1446d4eafbccac65cb2af6d.png?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/5c4d6c6a4a958b28567c376f2ed2c8e8.png?auto=format&dpr=1&w=256",
-      nfts: ['https://i.seadn.io/gcs/files/91983d47f737fc26308cd494819a779b.png?auto=format&dpr=1&w=256', 'https://i.seadn.io/gcs/files/302b9a9af78f96ba4b64811eb3df5b42.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/11b58bf81c887cb3ccfbdf8ecc6bbb52.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/2976cf2c4bccfe331d1df7eac72fe61d.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/735ca1ea14d910ce05f6c4cf5d97b63e.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/59524427ca5b19dd17d864fca1fd5dc4.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/926559692414fec5f551ce7688c48b46.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/4aef0ab4ab4bfd2291694d1fd7ca42f8.png?auto=format&dpr=1&w=256',
-
-      ],
+      nfts: [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal8],
       website: '',
       twitter: 'https://twitter.com/GEGNFT',
       discord: 'https://discord.gg/mnfstlabs',
@@ -82,21 +93,26 @@ export default function About() {
       description: "Ring Runnerz introduces a 'play-to-experience' model that engages users in an immersive gaming universe. It's more than a game. It's an innovative blend of entertainment and earning, where players can actively shape their destinies. Ring Runnerz brings a thrilling, interactive layer to the MNFST Labs multiverse, setting the stage for endless adventures and opportunities.",
       banner: "https://i.seadn.io/gcs/files/ab8897d354a264d1b823fb5f18872cf7.jpg?auto=format&dpr=1&w=1920",
       logo: "https://i.seadn.io/gcs/files/f530eb01ed817788a7388c93087e1ae1.gif?auto=format&dpr=1&w=256",
-      nfts: ['https://i.seadn.io/gcs/files/6f2ca357bab5e0f904187bb5de5a3c0d.png?auto=format&dpr=1&w=256', 'https://i.seadn.io/gcs/files/d83fd93af857e6080c567af1e530cea1.png?auto=format&dpr=1&w=256',
+      nfts: [rin1, rin2, rin3, rin4, rin5, rin6, rin7, rin8],
 
-        'https://i.seadn.io/gcs/files/e0aa03e5181fbe3612344fe8fce46ee4.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/421566e1ae829a633b2f60b8453e2bae.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/8f58a10b261e19700d3b2bab05557711.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/6e5f4cbe8c82cd458d1aa3732fd81e9d.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/e080b210c890971348dc1611026a0741.png?auto=format&dpr=1&w=256',
-        'https://i.seadn.io/gcs/files/ed2875d21fd6a599b2f6bcef7fe90ac3.png?auto=format&dpr=1&w=256',
-
-      ],
       website: 'https://ringrunnerz.xyz/',
       twitter: 'https://twitter.com/RingRunnerz',
       discord: 'https://discord.gg/mnfstlabs',
       opensea: 'https://opensea.io/collection/ringrunnerz-nft',
       magicEden: 'https://magiceden.io/collections/polygon/ring_runnerz',
+    },
+
+    {
+      name: 'Bombas',
+      description: 'Bombaz represents MNFST Labs innovative leap into the Solana blockchain, connecting it with our roots in Polygon.This collection is about accessibility, symbolizing our commitment to making creativity possible and affordable through low minting prices.Bombaz is a pioneering effort that reflects our vision, transcending barriers and embracing endless possibilities.',
+      banner: bombBanner,
+      logo: bomb1,
+      nfts: [bomb1, bomb2, bomb3, bomb4, bomb5, bomb5, bomb6, bomb7],
+      website: 'https://bombaclot.xyz/',
+      twitter: 'https://twitter.com/bombaclotnft',
+      discord: 'https://discord.gg/mnfstlabs',
+      opensea: null,
+      magicEden: 'https://magiceden.io/marketplace/bombaclot',
     },
     {
       name: 'Region79',
@@ -107,22 +123,9 @@ export default function About() {
       website: 'https://www.region79.xyz/',
       twitter: 'https://twitter.com/Region79nft',
       discord: 'https://discord.gg/mnfstlabs',
-      opensea: 'https://opensea.io/marketplace/region79',
-      magicEden: '',
+      opensea: null,
+      magicEden: 'https://magiceden.io/marketplace/region79',
     },
-    {
-      name: 'Bombas',
-      description: 'Bombaz represents MNFST Labs innovative leap into the Solana blockchain, connecting it with our roots in Polygon.This collection is about accessibility, symbolizing our commitment to making creativity possible and affordable through low minting prices.Bombaz is a pioneering effort that reflects our vision, transcending barriers and embracing endless possibilities.',
-      banner: bombBanner,
-      logo: bomb1,
-      nfts: [bomb1, bomb2, bomb3, bomb4, bomb5, bomb5, bomb6, bomb7],
-      website: 'https://bombaclot.xyz/',
-      twitter: 'https://twitter.com/bombaclotnft',
-      discord: 'https://discord.gg/mnfstlabs',
-      opensea: 'https://opensea.io/marketplace/bombaclot',
-      magicEden: '',
-    },
-
 
   ]
   return (
@@ -133,7 +136,7 @@ export default function About() {
             <h1 data-aos=''>PROJECTS</h1>
           </div>
           <div className='content'>
-            {/* <Swiper
+            <Swiper
               slidesPerView={3}
               spaceBetween={15}
               navigation={true}
@@ -142,37 +145,40 @@ export default function About() {
               }}
               modules={[Pagination, Navigation]}
               className='mySwiper'
-            > */}
-            {projects.map((project) => {
-              return (
-                <>
-                  <div
-                    className='box'
-                    onClick={() => {
-                      setActive(project)
-                    }}
-                  >
-                    <img
-                      src={project.logo}
-                      alt=''
-                      loading='lazy'
-                    />
-                    <div className='upper'>
-                      <div className='btn'>
+            >
+              {projects.map((project) => {
+                return (
+                  <>
+                    <SwiperSlide>
+                      <div
+                        className='box'
+                        onClick={() => {
+                          setActive(project)
+                        }}
+                      >
                         <img
-                          src={btn1}
+                          src={project.logo}
                           alt=''
+                          loading='lazy'
                         />
-                        <span>
-                          {project.name}
-                        </span>
+                        <div className='upper'>
+                          <div className='btn'>
+                            <img
+                              src={btn1}
+                              alt=''
+                            />
+                            <span>
+                              {project.name}
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </>
-              )
-            })}
-            {/* </Swiper> */}
+                    </SwiperSlide>
+
+                  </>
+                )
+              })}
+            </Swiper>
           </div>
         </div>
         {active && (

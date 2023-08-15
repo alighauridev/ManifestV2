@@ -9,6 +9,7 @@ import Team from "../components/Team";
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import Collection from '../components/Collection';
+import Tools from '../components/Tools';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -43,6 +44,7 @@ const Home = () => {
       <div id='mission' className="page fourth-page">
         <Mission />
       </div>
+      <Tools />
       <div className="page fourth-page">
         <Team />
       </div>

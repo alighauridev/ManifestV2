@@ -63,7 +63,7 @@
                 ul {
                     display: flex;
                     flex-direction: column;
-                    gap: 23px;
+                    // gap: 23px;
                     list-style: none;
                     margin: 0;
                     padding: 0;
@@ -103,7 +103,7 @@
                         font-size: 24px;
                         font-style: normal;
                         font-weight: 300;
-                        padding: 20px 10px;
+                        padding: 25px 10px;
                         line-height: 100%;
                         position: relative;
                         text-transform: uppercase;
@@ -175,8 +175,9 @@
                     bottom: 20px;
                     max-width: 500px;
                     transition: all 0.5s ease-in-out;
-                    padding: 30px 0px 5px;
-                    border-bottom: 3px solid #ffffff36;
+                    padding: 20px 12px 5px;
+                    border-bottom: 1px solid #ffffff36;
+                    background: #00000059;
                     @include md {
                         position: initial;
                     }

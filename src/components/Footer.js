@@ -43,12 +43,12 @@ const Footer = () => {
           <div className="icons">
             <h2>Find us on</h2>
             <ul>
-              <a href="#">
+              {/* <a href="#">
                 <img src={icon1} alt="" />
               </a>
               <a href="#">
                 <img src={icon2} alt="" />
-              </a>
+              </a> */}
               <a href="#">
                 <img src={icon3} alt="" />
               </a>

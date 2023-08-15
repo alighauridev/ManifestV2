@@ -21,7 +21,8 @@ const Teams = () => {
                             return (
                                 <a
                                     key={ind}
-
+                                    href={ite.twitter}
+                                    target="_blank"
                                 >
                                     <div key={ind} className="item" data-aos=""
                                         data-aos-delay={150 * ind}

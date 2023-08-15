@@ -400,7 +400,7 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 button {
                     padding: 6px 20px;
                     background: transparent;
@@ -409,6 +409,7 @@
                     cursor: pointer;
                     margin-left: 10px;
                     font-family: 'Fjalla One';
+                    text-transform: uppercase;
                 }
                 .links {
                     display: flex;
@@ -439,8 +440,8 @@
                             }
                         }
                         &.magicEden {
-                            svg {
-                                font-size: 1.2rem;
+                            img {
+                                height: 25px;
                             }
                         }
                     }
@@ -490,7 +491,7 @@
                 margin: auto;
                 position: relative;
                 width: 100%;
-                max-width: 560px;
+                /* max-width: 560px; */
                 text-align: center;
                 .cross {
                     filter: invert(1);
@@ -508,7 +509,7 @@
                     border-radius: 0.3em !important;
                     box-shadow: rgba(7, 7, 7, 0.2) 0px;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                     width: 100%;
                     margin: auto;
                     cursor: pointer;
