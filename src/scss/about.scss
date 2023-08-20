@@ -16,6 +16,17 @@
     @include -lg {
         height: 100%;
     }
+    @include md {
+        background-position: top 0px center, top;
+        background-repeat: repeat;
+        z-index: 12;
+        display: flex;
+        align-items: center;
+        background-size: 1000px;
+        justify-content: center;
+        overflow: hidden;
+        padding: 90px 0;
+    }
     &::before {
         background-image: url('https://www.cyberpunk.net/build/images/razor-18e21da3.svg');
         top: -48px;
@@ -53,6 +64,7 @@
         @include md {
             grid-template-columns: 1fr;
             row-gap: 30px;
+            padding: 0px 0px;
         }
 
         .layer {
@@ -81,6 +93,7 @@
                 text-transform: uppercase;
                 @include md {
                     font-family: 'refinery medium';
+                    font-weight: 400;
                 }
             }
 
@@ -163,15 +176,14 @@
                     right: 18px;
                     position: absolute;
                     bottom: 7px;
-                    border-right: 1px solid #01bbc7;
-                    border-top: 40px solid #01bbc7;
-                    transform: rotate(42deg) translate(13px, 7px);
+                    border-right: 2px solid #01bbc7;
+                    border-top: 70px solid #01bbc7;
+                    transform: rotate(31deg) translate(16px, 7px);
                     z-index: 12;
                 }
                 img {
                     object-fit: cover;
                     width: 100%;
-                    height: 300px;
                     transition: all 0.6s ease-in-out;
                     transform: scale(1);
 
@@ -263,7 +275,8 @@
                     initial
                 );
                 box-sizing: content-box;
-                height: 350px !important;
+                height: 550px !important;
+                justify-content: start;
             }
             .imges {
                 display: flex;
@@ -294,6 +307,16 @@
                         width: 100%;
                     }
                 }
+            }
+        }
+        .one__ {
+            @include lg {
+                display: none;
+            }
+        }
+        .two__ {
+            @include -lg {
+                display: none;
             }
         }
     }
@@ -366,6 +389,9 @@
             }
             .start {
                 display: grid;
+                @include md {
+                    order: 2;
+                }
                 .main {
                     max-height: 250px;
                     height: 100%;
@@ -486,6 +512,7 @@
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(8px);
             right: 0px;
+
             .img {
                 height: 90vh;
                 margin: auto;
@@ -505,7 +532,7 @@
                         width: 100%;
                     }
                 }
-                img {
+                > img {
                     border-radius: 0.3em !important;
                     box-shadow: rgba(7, 7, 7, 0.2) 0px;
                     height: 100%;
@@ -513,8 +540,21 @@
                     width: 100%;
                     margin: auto;
                     cursor: pointer;
+                    @include md {
+                        width: 90%;
+                    }
                 }
             }
         }
+    }
+}
+.right__arrow {
+    @include md {
+        top: 80% !important;
+    }
+}
+.left__arrow {
+    @include md {
+        top: 80% !important;
     }
 }

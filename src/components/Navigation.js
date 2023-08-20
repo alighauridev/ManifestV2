@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { nav } from "../assests/data";
 import "../scss/navigation.scss";
 import { FaDiscord } from "react-icons/fa";
+import cross from "../assests/bb (2).png"
 import { AiOutlineTwitter } from "react-icons/ai";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import logo1 from "../assests/LABS2b.png";
@@ -14,6 +15,7 @@ const Navigation = () => {
   const [navToggler, setNavToggler] = useState(false);
   const [navColor, setNavColor] = useState(false);
   const [toggleImage, setToggleImage] = useState(false)
+  const [merch, setMerch] = useState(false)
   const [scroll, setScroll] = useState(false);
   const [walletConnected, setWalletConnected] = useState(false); // Added state to track wallet connection status
   const NFT_COLLECTIONS = [
@@ -132,6 +134,27 @@ const Navigation = () => {
   }, [account]);
   return (
     <>
+      {
+        merch && <div className="cooming" onClick={() => setMerch(false)}>
+          <div
+            className="cross"
+            style={{
+              filter: 'invert(1)',
+              width: '35px',
+              position: 'absolute',
+              right: '5%',
+              cursor: 'pointer',
+              top: '5%'
+            }}
+            onClick={() => {
+              setMerch(false);
+            }}
+          >
+            <img style={{ width: '100%' }} src={cross} alt="" />
+          </div>
+          <p>Cooming Soon!</p>
+        </div>
+      }
       <header className={navToggler ? "nav__active" : ""} >
         <div className="outer">
           <div className="container">
@@ -145,16 +168,27 @@ const Navigation = () => {
                 <ul className={navToggler ? "ul__active" : ""}>
                   {nav.map((ite, ind) => {
                     return (
-                      <li key={ind}>
-                        <a
-                          style={navColor ? { textShadow: "none" } : {}}
-                          href={ite.path}
-                        >
-                          {ite.name}
-                        </a>
-                      </li>
+                      <>
+                        <li key={ind}>
+                          <a
+                            style={navColor ? { textShadow: "none" } : {}}
+                            href={ite.path}
+                          >
+                            {ite.name}
+                          </a>
+                        </li>
+
+                      </>
                     );
                   })}
+                  <li onClick={() => setMerch(true)}>
+                    <Link
+
+
+                    >
+                      MERCH
+                    </Link>
+                  </li>
                 </ul>
                 <div className="btn" onClick={() => { connectWalletWithNFTCheck(); }}>
                   {/* Display "CONNECT WALLET" or "CONNECTED" based on the wallet connection status */}

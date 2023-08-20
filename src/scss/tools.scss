@@ -3,6 +3,15 @@
 
 .tools {
     padding: 120px 20px;
+    width: 100%;
+    background-image: linear-gradient(#000 0%, #0003 75%),
+        linear-gradient(#0003 50%, #000 100%),
+        url('https://www.br1game.com/static/bg_team.3e7c87cc.webp');
+    background-position: top;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
     .container {
         max-width: 1300px;
         margin: auto;
@@ -14,6 +23,21 @@
                 grid-template-columns: 1fr;
             }
             .start {
+                width: 100%;
+                // background-image: radial-gradient(
+                //         76.62% 76.62%,
+                //         #0000 1.23%,
+                //         #000000bf 63.77%
+                //     ),
+                //     url('https://www.br1game.com/static/roadmap_bg.bf2926fb.webp');
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                flex-direction: column;
+                align-items: center;
+                padding-top: clamp(0px, 7.44792vw, 143px);
+                padding-bottom: clamp(0px, 8.54167vw, 164px);
+                display: flex;
                 img {
                     width: 100%;
                     height: 100%;

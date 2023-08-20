@@ -6,13 +6,14 @@ import Home from './pages/Home'
 // import './scss/normalize.css'
 import './scss/reset.css'
 import './scss/style.css'
-
+import 'react-toastify/dist/ReactToastify.css';
 import ReactGA from 'react-ga'
 import Loader from './components/Loader';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Agreement from './pages/Aggrement';
 import Guidelines from './pages/GuideLines';
+import { ToastContainer } from 'react-toastify';
 function App() {
     let [loading, setLoading] = useState(true)
     let [color, setColor] = useState('#fff')
@@ -40,6 +41,7 @@ function App() {
 
                 </>
             )}
+            <ToastContainer />
         </>
     )
 }

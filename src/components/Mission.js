@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import m1 from "../assests/m.1.jpg";
-import m2 from "../assests/m.2.jpg";
-import m3 from "../assests/m.3.jpg";
+import m1 from "../assests/Mission slides/Mission slides/Mission image 1/TANGIBLE2.png";
+import m2 from "../assests/Mission slides/Mission slides/Mission image 2/INNOVATIVE.png";
+import m3 from "../assests/Mission slides/Mission slides/Mission image 3/IMMERSIVE.png";
 import "../scss/mission.scss";
 const Mission = () => {
   const [tabs, setTabs] = useState("tab1");
@@ -71,9 +71,10 @@ const Mission = () => {
                 <div
                   className="img"
                   data-aos-not="fade"
+
                   style={tabs === "tab2" ? { transform: "scale(1)" } : null}
                 >
-                  <img src={"https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"} alt="" />
+                  <img src={m2} alt="" />
                   <div className="para" data-aos-not="fade">
                     <p>
                       At MNFST Labs, storytelling transforms digital assets into an immersive journey.
@@ -91,7 +92,7 @@ const Mission = () => {
                   data-aos-not="fade"
                   style={tabs === "tab3" ? { transform: "scale(1)" } : null}
                 >
-                  <img src={"https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"} alt="" />
+                  <img src={m3} alt="" />
                   <div className="para" data-aos-not="fade">
                     <p>
                       Innovation drives MNFST Labs, fueling our exploration of real-world tech that aligns with our digital universe.

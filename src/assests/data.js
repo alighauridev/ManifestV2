@@ -18,14 +18,7 @@ export const nav = [
     path: "#team",
   },
 
-  // {
-  //   name: "CONTACT",
-  //   path: "#contact",
-  // },
-  {
-    name: "MERCH",
-    path: "#contact",
-  },
+
 ];
 export const team = [
   {

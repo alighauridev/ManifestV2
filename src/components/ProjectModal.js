@@ -3,9 +3,22 @@ import { BsDiscord, BsGlobe, BsTwitter } from 'react-icons/bs'
 import { SiOpensea } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import mg from '../assests/me.png'
+import right from '../assests/right-chevron.png'
 const ProjectModal = ({ setActive, active }) => {
-    const [mainImg, setMainImg] = useState(null)
-    const [activeImage, setActiveImage] = useState(null)
+    const [mainImg, setMainImg] = useState(null);
+    const [activeImageIndex, setActiveImageIndex] = useState(null); // Track active image index
+
+    const showNextImage = () => {
+        setActiveImageIndex((prevIndex) =>
+            prevIndex === active.nfts.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const showPrevImage = () => {
+        setActiveImageIndex((prevIndex) =>
+            prevIndex === 0 ? active.nfts.length - 1 : prevIndex - 1
+        );
+    };
     return (
         <div
             className='model'
@@ -29,17 +42,18 @@ const ProjectModal = ({ setActive, active }) => {
                         <img loading='lazy' src={active?.banner} alt='' />
                     </div>
                     <div className='gallery'>
-                        {active.nfts.map((img) => {
+                        {active.nfts.map((img, index) => { // Add 'index' parameter here
                             return (
                                 <img
-                                    onClick={() => setActiveImage(img)}
+                                    onClick={() => setActiveImageIndex(index)} // Use 'index' here
                                     src={img}
                                     alt=''
                                     loading='lazy'
                                 />
-                            )
+                            );
                         })}
                     </div>
+
                 </div>
                 <div className='upper'>
                     <h2>{active.name}</h2>
@@ -95,7 +109,7 @@ const ProjectModal = ({ setActive, active }) => {
                 </div>
             </div>
 
-            {activeImage && (
+            {activeImageIndex !== null && (
                 <div
                     className='img__model'
                     style={active ? { display: 'flex', opacity: '1' } : null}
@@ -104,16 +118,35 @@ const ProjectModal = ({ setActive, active }) => {
                         <div
                             className='cross'
                             onClick={() => {
-                                setActiveImage(false)
+                                setActiveImageIndex(null);
                             }}
                         >
-                            <img
-                                loading='lazy'
-                                src='/images/bb (2).png'
-                                alt=''
-                            />
+                            <img loading='lazy' src='/images/bb (2).png' alt='' />
                         </div>
-                        <img src={activeImage} loading='lazy' alt='' />
+                        <img
+                            src={active.nfts[activeImageIndex]}
+                            loading='lazy'
+                            alt=''
+                        />
+                        <button className='right__arrow' onClick={showPrevImage} style={{
+                            padding: 'initial',
+                            maxWidth: '40px',
+                            position: 'absolute',
+                            top: '50%',
+                            left: '5%',
+                            transform: 'rotateY(-180deg)',
+                            background: 'transparent',
+                            border: '0'
+                        }}><img style={{ width: '40px' }} src={right} alt="" /></button>
+                        <button className='left__arrow' onClick={showNextImage} style={{
+                            padding: 'initial',
+                            maxWidth: '40px',
+                            position: 'absolute',
+                            top: '50%',
+                            right: '5%',
+                            background: 'transparent',
+                            border: '0'
+                        }}><img src={right} style={{ width: '40px' }} alt="" /></button>
                     </div>
                 </div>
             )}
