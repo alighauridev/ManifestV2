@@ -3,15 +3,28 @@
 
 .tools {
     padding: 120px 20px;
-    width: 100%;
-    background-image: linear-gradient(#000 0%, #0003 75%),
-        linear-gradient(#0003 50%, #000 100%),
-        url('https://www.br1game.com/static/bg_team.3e7c87cc.webp');
-    background-position: top;
-    background-size: cover;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+    position: relative;
+    &::before {
+        content: '';
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        width: 100%;
+        background-image: linear-gradient(#000 0%, #0003 75%),
+            linear-gradient(#0003 50%, #000 100%),
+            url('https://www.br1game.com/static/bg_team.3e7c87cc.webp');
+        background-position: top;
+        background-size: cover;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        z-index: -1;
+        filter: hue-rotate(90deg);
+        opacity: 0.3;
+        left: 0;
+    }
     .container {
         max-width: 1300px;
         margin: auto;

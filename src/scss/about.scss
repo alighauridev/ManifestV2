@@ -12,7 +12,7 @@
     background-size: cover;
     justify-content: center;
     overflow: hidden;
-    padding: 90px 0;
+    padding: 90px 0px;
     @include -lg {
         height: 100%;
     }
@@ -25,7 +25,7 @@
         background-size: 1000px;
         justify-content: center;
         overflow: hidden;
-        padding: 90px 0;
+        padding: 90px 15px;
     }
     &::before {
         background-image: url('https://www.cyberpunk.net/build/images/razor-18e21da3.svg');
@@ -409,7 +409,7 @@
                     grid-gap: 10px;
                     margin-top: 10px;
                     @include md {
-                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-columns: 1fr 1fr;
                     }
                     img {
                         width: 100%;

@@ -41,7 +41,7 @@ const Home = () => {
         <About />
       </div>
 
-      <div id='mission' className="page fourth-page">
+      <div className="page fourth-page">
         <Mission />
       </div>
       <Tools />

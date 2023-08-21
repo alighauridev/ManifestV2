@@ -146,7 +146,7 @@ export default function About() {
           </div>
           <div className='content one__'>
             <Swiper
-              slidesPerView={3}
+              slidesPerView={4}
               spaceBetween={15}
               navigation={true}
               // loop={true}
