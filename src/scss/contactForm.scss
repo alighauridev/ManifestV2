@@ -285,6 +285,37 @@
                 padding: 5px 0;
             }
             .item {
+                * {
+                    background: transparent !important;
+                }
+                .css-1nmdiq5-menu {
+                    top: 100%;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    background-color: #26d6cd !important;
+                    border-radius: 4px;
+                    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
+                        0 4px 11px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+                    box-sizing: border-box;
+                }
+                .css-tr4s17-option {
+                    cursor: default;
+                    display: block;
+                    font-size: inherit;
+                    width: 100%;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                    background-color: #2684ff !important;
+                    color: hsl(0, 0%, 100%);
+                    padding: 8px 12px;
+                    box-sizing: border-box;
+                }
                 > input,
                 > select {
                     display: block;
@@ -536,10 +567,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #bdc2c2;
+    color: #bdc2c2 !important;
     margin-left: 6px !important;
     margin-right: 2px;
     box-sizing: border-box;
     font-weight: 100 !important;
     font-size: 14px !important;
+}
+.css-1nmdiq5-menu {
+    top: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: #26d6cd !important;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 11px hsla(0, 0%, 0%, 0.1);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
 }

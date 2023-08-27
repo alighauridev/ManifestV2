@@ -185,7 +185,6 @@ const ContactForm = ({ setCreatorsForm }) => {
                                     id='preferredBlockch'
                                     placeholder='Your Preferred Blockchain'
                                     options={blockchainOptions}
-                                    value={form.preferredBlockchain}
                                     onChange={(selectedOption) =>
                                         handleChange(
                                             'preferredBlockchain',
@@ -197,9 +196,8 @@ const ContactForm = ({ setCreatorsForm }) => {
                             <div className='first grid__two'>
                                 <div className='item'>
                                     <Select
-                                        id='isPlayVideoGames'
+
                                         options={interestInWeb3}
-                                        value={form.playVideoGames}
                                         onChange={(selectedOption) =>
                                             handleChange(
                                                 'primaryInterestInWeb3',
@@ -213,9 +211,8 @@ const ContactForm = ({ setCreatorsForm }) => {
                                 {/* ... */}
                                 <div className='item'>
                                     <Select
-                                        id='videoGameType'
+
                                         options={interestInWeb3}
-                                        value={form.videoGameType}
                                         onChange={(selectedOption) =>
                                             handleChange(
                                                 'secondaryInterestInWeb3',
@@ -263,7 +260,6 @@ const ContactForm = ({ setCreatorsForm }) => {
                                     <Select
                                         id='videoGameType'
                                         options={videoGameTypeOptions}
-                                        value={form.videoGameType}
                                         onChange={(selectedOption) =>
                                             handleChange(
                                                 'videoGameType',

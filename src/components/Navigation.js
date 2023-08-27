@@ -169,7 +169,7 @@ const Navigation = () => {
                   {nav.map((ite, ind) => {
                     return (
                       <>
-                        <li key={ind}>
+                        <li key={ind} onClick={() => { setNavToggler(false) }}>
                           <a
                             style={navColor ? { textShadow: "none" } : {}}
                             href={ite.path}
@@ -181,7 +181,11 @@ const Navigation = () => {
                       </>
                     );
                   })}
-                  <li onClick={() => setMerch(true)}>
+                  <li onClick={() => {
+
+                    setMerch(true)
+                    setNavToggler(false)
+                  }}>
                     <Link
 
 

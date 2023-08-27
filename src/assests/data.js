@@ -17,6 +17,10 @@ export const nav = [
     name: "TEAM",
     path: "#team",
   },
+  {
+    name: "TOOLS",
+    path: "#tools",
+  },
 
 
 ];

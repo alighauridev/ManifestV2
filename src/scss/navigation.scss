@@ -131,7 +131,7 @@ header {
                     position: relative;
                     background: rgba(0, 0, 0, 0.6);
                     border: 1px solid #01bbc7;
-                    max-width: 560px;
+                    max-width: 620px;
                     width: 100%;
                     display: flex;
                     align-items: center;
@@ -193,7 +193,7 @@ header {
                         font-weight: 400;
                         cursor: pointer;
                         width: 220px;
-                        @include mobile {
+                        @include md {
                             height: auto;
                             width: 260px;
                             padding: 13px 22px;
@@ -221,7 +221,7 @@ header {
                         /* gap: 30px; */
                         width: 100%;
 
-                        @include mobile {
+                        @include md {
                             flex-direction: column;
                             row-gap: 20px;
                             padding: 30px 0px;
@@ -276,7 +276,7 @@ header {
                     justify-content: end;
                     font-family: 'font-2';
 
-                    @include mobile {
+                    @include md {
                         display: flex;
                     }
 

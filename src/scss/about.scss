@@ -171,22 +171,54 @@
                     0% 70%,
                     0% 30%
                 );
+                max-width: 310px;
                 &::before {
                     content: '';
                     right: 18px;
                     position: absolute;
                     bottom: 7px;
-                    border-right: 2px solid #01bbc7;
+                    border-right: 3px solid #01bbc7;
                     border-top: 70px solid #01bbc7;
                     transform: rotate(31deg) translate(16px, 7px);
                     z-index: 12;
                 }
+                &:hover::after {
+                    -webkit-transform: translateX(0) skewX(-10deg) scaleX(1.35);
+                    transform: translateX(0) skewX(-10deg) scaleX(1.35);
+                }
+                &::after {
+                    bottom: 0;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    mix-blend-mode: multiply;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    background-color: #ff4655;
+                    left: 0;
+                    right: 0;
+                    -webkit-transition: -webkit-transform 0.3s
+                        cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transition: -webkit-transform 0.3s
+                        cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transition: transform 0.3s
+                        cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transition: transform 0.3s
+                            cubic-bezier(0.215, 0.61, 0.355, 1),
+                        -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+                    -webkit-transform: translateX(-120%) skewX(-10deg);
+                    transform: translateX(-120%) skewX(-10deg);
+                }
                 img {
                     object-fit: cover;
                     width: 100%;
-                    transition: all 0.6s ease-in-out;
                     transform: scale(1);
-
+                    transition: 0.7s cubic-bezier(0.17, 0.57, 0.43, 0.89),
+                        -webkit-transform 0.7s cubic-bezier(0.17, 0.57, 0.43, 0.89);
+                    &:hover {
+                        transform: scale(1.2);
+                    }
                     @include sm {
                         width: 100%;
                     }
@@ -214,7 +246,7 @@
 
                         position: relative;
                         color: white;
-
+                        z-index: 13;
                         user-select: none;
 
                         img {
@@ -558,3 +590,25 @@
         top: 80% !important;
     }
 }
+// .swiper-button-next {
+//     background: rebeccapurple;
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     width: 40px;
+//     width: 40px;
+//     height: 40px;
+//     z-index: 12;
+//     cursor: pointer;
+// }
+// .swiper-button-prev {
+//     background: rebeccapurple;
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     width: 40px;
+//     width: 40px;
+//     height: 40px;
+//     z-index: 12;
+//     cursor: pointer;
+// }
