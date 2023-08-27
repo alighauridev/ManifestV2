@@ -150,9 +150,11 @@ const Navigation = () => {
               setMerch(false);
             }}
           >
+
+
             <img style={{ width: '100%' }} src={cross} alt="" />
           </div>
-          <p>Cooming Soon!</p>
+          <p>Coming Soon!</p>
         </div>
       }
       <header className={navToggler ? "nav__active" : ""} >
